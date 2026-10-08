@@ -3,12 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="游心 · With Wandering Heart" />
+  <meta name="description" content="游心 · With Wandering Heart。乘物以游心。jay zhao 的个人主页：FDE / AI 落地、交易银行业务笔记与成长记录。" />
+  <meta name="author" content="jay zhao" />
+  <meta name="theme-color" content="#090b0e" />
+  <meta property="og:title" content="游心 · With Wandering Heart" />
+  <meta property="og:description" content="乘物以游心。随事而行，心有余地。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://withwanderingheart.github.io/" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <title>游心 · With Wandering Heart</title>
-  <link rel="stylesheet" href="styles.css?v=sec3" />
+  <link rel="canonical" href="https://withwanderingheart.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 96'%3E%3Cpolygon points='39 0 0 22 0 67 39 90 78 68 78 23' fill='%23090b0e' stroke='%2364ffda' stroke-width='6'/%3E%3Ctext x='39' y='58' text-anchor='middle' font-size='34' font-family='ui-monospace,monospace' font-weight='700' fill='%237dd3fc'%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css?v=ed20261008b" />
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      if (sessionStorage.getItem("yh-seen-loader") === "1") {
+        document.documentElement.classList.add("skip-loader");
+      }
+    } catch (err) {}
+  </script>
 </head>
 <body>
+
+  <a class="skip" href="#home">跳到内容</a>
 
   <div class="loader" id="loader" aria-hidden="true">
     <div class="logo-wrapper">
@@ -30,14 +48,14 @@
     </div>
   </div>
 
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="sidebar-top">
-        <a class="hex-logo" href="#home" aria-label="回到首页">
-          <span class="hex-container" aria-hidden="true">
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home">
+        <span class="hex-logo" aria-hidden="true">
+          <span class="hex-container">
             <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
           </span>
-          <span class="logo-container" aria-hidden="true">
+          <span class="logo-container">
             <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -51,174 +69,210 @@
               <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGrad)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
             </svg>
           </span>
-        </a>
-        <p class="side-name">游心</p>
-        <p class="side-en">With Wandering Heart</p>
-        <nav class="side-nav" aria-label="主导航">
-          <a href="#home" class="active" data-nav>00. 首页</a>
-          <a href="#about" data-nav>01. 关于</a>
-          <a href="#experience" data-nav>02. 经历</a>
-          <a href="#projects" data-nav>03. 项目</a>
-          <a href="#excerpt" data-nav>04. 摘录</a>
-        </nav>
-      </div>
-      <div class="sidebar-foot">
-        <a href="vanholtz.html">另一版视觉 →</a>
-      </div>
-    </aside>
+        </span>
+        <span class="brand-name" translate="no">游心</span>
+      </a>
 
-    <main class="content">
-      <section id="home" class="panel panel-hero">
-        <div class="panel-inner">
-          <a class="hex-logo hero-mark" href="#home" aria-label="游心">
-            <span class="hex-container" aria-hidden="true">
-              <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
-            </span>
-            <span class="logo-container" aria-hidden="true">
-              <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="hexGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#64ffda"/>
-                    <stop offset="35%" stop-color="#7dd3fc"/>
-                    <stop offset="65%" stop-color="#c084fc"/>
-                    <stop offset="100%" stop-color="#fb7185"/>
-                  </linearGradient>
-                </defs>
-                <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
-                <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGradHero)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
-              </svg>
-            </span>
-          </a>
-          <p class="hello">你好，我是</p>
-          <h1 class="name">游心</h1>
-          <p class="tagline">With Wandering Heart</p>
-          <p class="bio">以「乘物以游心」自勉：随事而行，心有余地。记录工作反思、个人成长与实践项目。</p>
-          <a class="scroll-cue" href="#about">01 关于</a>
-        </div>
-      </section>
+      <nav class="site-nav" aria-label="页面章节">
+        <a href="#home" data-nav>首页</a>
+        <a href="#about" data-nav>关于</a>
+        <a href="#experience" data-nav>经历</a>
+        <a href="#projects" data-nav>项目</a>
+        <a href="#excerpt" data-nav>摘录</a>
+        <a href="#notes" data-nav>随记</a>
+      </nav>
 
-      <section id="about" class="panel">
-        <div class="panel-inner">
-          <header class="panel-head">
-            <span class="panel-num">01</span>
-            <h2>关于</h2>
-          </header>
-          <div class="panel-rule" aria-hidden="true"></div>
-          <p>我是 <strong>jay zhao</strong>（With Wandering Heart）。偏好把复杂事情写清楚，把节奏留在可控范围内。</p>
-          <p class="muted">方向上关注 FDE / AI 落地，也持续整理金融业务与个人成长笔记。</p>
-        </div>
-      </section>
+      <a class="header-alt" href="vanholtz.html">另一版</a>
 
-      <section id="experience" class="panel">
-        <div class="panel-inner">
-          <header class="panel-head">
-            <span class="panel-num">02</span>
-            <h2>经历</h2>
-          </header>
-          <div class="panel-rule" aria-hidden="true"></div>
-          <ol class="timeline">
-            <li>
-              <h3>少做「看起来忙」的事</h3>
-              <p>每周留一段安静时间，复盘哪些投入真正改变了进度。</p>
-            </li>
-            <li>
-              <h3>把反馈当成原材料</h3>
-              <p>先记下原话，再区分事实与情绪，挑一两处落地。</p>
-            </li>
-            <li>
-              <h3>节奏比冲刺更重要</h3>
-              <p>固定周记与月度回顾，一次只改卡住的一两件事。</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="projects" class="panel">
-        <div class="panel-inner">
-          <header class="panel-head">
-            <span class="panel-num">03</span>
-            <h2>项目</h2>
-          </header>
-          <div class="panel-rule" aria-hidden="true"></div>
-          <ul class="projects">
-            <li>
-              <a class="project" href="https://withwanderingheart.github.io/">
-                <span class="project-title">Personal Site · 游心</span>
-                <span class="project-desc">个人主页：工作反思、成长与实践记录。本站 Brittany 风格版。</span>
-                <span class="project-tags"><span>HTML</span><span>CSS</span><span>Pages</span></span>
-              </a>
-            </li>
-            <li>
-              <a class="project" href="vanholtz.html">
-                <span class="project-title">Personal Site · Van Holtz 风格</span>
-                <span class="project-desc">同内容的另一套视觉实验：深蓝大字号、项目优先。</span>
-                <span class="project-tags"><span>Design</span><span>Static</span></span>
-              </a>
-            </li>
-            <li>
-              <div class="project static">
-                <span class="project-title">TB 业务笔记整理</span>
-                <span class="project-desc">把结算、资金池与收入结构口述整理成可复用的 Obsidian 笔记。</span>
-                <span class="project-tags"><span>Notes</span><span>Finance</span></span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="excerpt" class="panel">
-        <div class="panel-inner">
-          <header class="panel-head">
-            <span class="panel-num">04</span>
-            <h2>摘录</h2>
-          </header>
-          <div class="panel-rule" aria-hidden="true"></div>
-          <blockquote>
-            <p>乘物以游心。</p>
-            <cite>《庄子·人间世》</cite>
-          </blockquote>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <p>© <span id="year"></span> With Wandering Heart</p>
-        <a href="vanholtz.html">Van Holtz 版</a>
-      </footer>
-    </main>
-  </div>
-
-  <header class="mobile-bar">
-    <a class="hex-logo" href="#home" aria-label="回到首页">
-      <span class="hex-container" aria-hidden="true">
-        <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
-      </span>
-      <span class="logo-container" aria-hidden="true">
-        <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="hexGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#64ffda"/>
-              <stop offset="35%" stop-color="#7dd3fc"/>
-              <stop offset="65%" stop-color="#c084fc"/>
-              <stop offset="100%" stop-color="#fb7185"/>
-            </linearGradient>
-          </defs>
-          <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
-          <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGradMobile)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
-        </svg>
-      </span>
-    </a>
-    <strong>游心</strong>
-    <button type="button" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileNav">菜单</button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="打开菜单">
+        <span class="menu-lines" aria-hidden="true"></span>
+      </button>
+    </div>
   </header>
-  <nav class="mobile-nav" id="mobileNav" hidden>
+
+  <nav class="mobile-nav" id="mobileNav" hidden aria-label="菜单">
     <a href="#home" data-nav>首页</a>
     <a href="#about" data-nav>关于</a>
     <a href="#experience" data-nav>经历</a>
     <a href="#projects" data-nav>项目</a>
     <a href="#excerpt" data-nav>摘录</a>
-    <a href="vanholtz.html">Van Holtz 版</a>
+    <a href="#notes" data-nav>随记</a>
+    <a class="mobile-alt" href="vanholtz.html">Van Holtz 版</a>
   </nav>
 
-  <script src="script.js?v=sec3"></script>
+  <main>
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="eyebrow hero-reveal d1"><span lang="en">jay zhao</span> · <span lang="en">With Wandering Heart</span></p>
+        <h1 id="hero-title" class="hero-title hero-reveal d2">
+          <span class="sr-only">游心。</span>
+          <span class="motto" translate="no">乘物以游心</span>
+        </h1>
+        <span class="grad-rule hero-reveal d3" aria-hidden="true"></span>
+        <p class="hero-en hero-reveal d3" lang="en">Ride along with things. Let the mind wander.</p>
+        <div class="hero-lower hero-reveal d4">
+          <div class="hero-copy">
+            <p class="dek">随事而行，心有余地。记录工作反思、AI 落地，与个人成长。</p>
+            <a class="cue" href="#about">关于 <span aria-hidden="true">↓</span></a>
+          </div>
+          <ul class="meta">
+            <li>FDE</li>
+            <li>AI 落地</li>
+            <li>交易银行</li>
+            <li>自媒体</li>
+            <li>成长笔记</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="split">
+          <header class="sec-head">
+            <p class="sec-index"><span>01</span> <span lang="en">About</span></p>
+            <h2 id="about-title">关于</h2>
+          </header>
+          <div>
+            <p class="lede">偏好把复杂的事情写清楚，把节奏留在可控范围内。</p>
+            <div class="prose">
+              <p>我是 <strong>jay zhao</strong>。写字、做这页站点时，用「游心 · With Wandering Heart」。</p>
+              <p>近两年在银行做交易银行（<span lang="en">transaction banking</span>）相关的业务，日常碰到的是结算、资金和收入结构。口述时很绕，写下来才站得住。</p>
+              <p>现在的方向是 <span lang="en">FDE</span>（<span lang="en">forward deployed engineer</span>）：少停在演示，把 AI 放进真实流程里。旁边是自媒体，和只给自己看的成长笔记。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section reveal" aria-labelledby="experience-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-index"><span>02</span> <span lang="en">Experience</span></p>
+          <h2 id="experience-title">经历</h2>
+        </header>
+        <p class="lede">履历不长。近两年在交易银行业务里，更多是在学怎么把一件事看清楚。</p>
+        <ol class="principles">
+          <li>
+            <h3>少做「看起来忙」的事</h3>
+            <p>每周留一段安静时间，复盘哪些投入真正改变了进度。</p>
+          </li>
+          <li>
+            <h3>把反馈当成原材料</h3>
+            <p>先记下原话，再区分事实与情绪，挑一两处落地。</p>
+          </li>
+          <li>
+            <h3>节奏比冲刺更重要</h3>
+            <p>固定周记与月度回顾，一次只改卡住的一两件事。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-index"><span>03</span> <span lang="en">Projects</span></p>
+          <h2 id="projects-title">项目</h2>
+        </header>
+        <p class="lede">目前公开的，是这页站点，和还在整理的业务笔记。</p>
+        <ul class="cards">
+          <li>
+            <a class="card" href="https://withwanderingheart.github.io/">
+              <span class="card-kicker">01</span>
+              <span class="card-title">Personal Site · 游心</span>
+              <span class="card-desc">这份主页。工作反思、成长与实践的记录。</span>
+              <span class="card-meta"><span>HTML</span><span>CSS</span><span>Pages</span></span>
+              <span class="card-go">查看 <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="vanholtz.html">
+              <span class="card-kicker">02</span>
+              <span class="card-title">Personal Site · Van Holtz</span>
+              <span class="card-desc">同一内容的另一套视觉：深蓝底、大字号、项目优先。</span>
+              <span class="card-meta"><span>Design</span><span>Static</span></span>
+              <span class="card-go">打开 <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li>
+            <article class="card card-static">
+              <span class="card-kicker">03</span>
+              <h3 class="card-title">TB 业务笔记整理</h3>
+              <p class="card-desc">把结算、资金池与收入结构口述整理成可复用的 Obsidian 笔记。</p>
+              <span class="card-meta"><span>Notes</span><span>Finance</span></span>
+              <span class="card-go">笔记 · 未公开</span>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="excerpt" class="section band reveal" aria-labelledby="excerpt-title">
+      <div class="wrap excerpt-inner">
+        <header class="sec-head">
+          <p class="sec-index"><span>04</span> <span lang="en">Excerpt</span></p>
+          <h2 id="excerpt-title">摘录</h2>
+        </header>
+        <blockquote>
+          <p translate="no">乘物以游心。</p>
+        </blockquote>
+        <p class="cite-row">
+          <cite>《庄子 · 人间世》</cite>
+          <span lang="en">Zhuangzi</span>
+        </p>
+        <p class="gloss">随事而行，而不被事拖着走。</p>
+      </div>
+    </section>
+
+    <section id="notes" class="section reveal" aria-labelledby="notes-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-index"><span>05</span> <span lang="en">Notes</span></p>
+          <h2 id="notes-title">随记</h2>
+        </header>
+        <p class="lede">公开写作还没开始。先把目录放在这里，免得方向散掉。</p>
+        <ol class="index">
+          <li>
+            <h3>工作反思</h3>
+            <p>哪些投入真正改变了进度。</p>
+          </li>
+          <li>
+            <h3>个人成长</h3>
+            <p>反馈、节奏，一次只改卡住的一两件事。</p>
+          </li>
+          <li>
+            <h3>金融业务</h3>
+            <p>结算、资金池与收入结构。</p>
+          </li>
+          <li>
+            <h3>AI 落地</h3>
+            <p>把模型放进真实流程，而不是停在演示。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section close reveal" aria-labelledby="close-title">
+      <div class="wrap close-grid">
+        <div>
+          <p class="sec-index"><span lang="en">Also</span></p>
+          <h2 id="close-title">同一内容，另一套视觉。</h2>
+          <p class="close-copy">Van Holtz 版用更深的蓝、更大的字。文字相同，节奏不同。</p>
+        </div>
+        <a class="cta" href="vanholtz.html">打开 Van Holtz 版 <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> 游心 · With Wandering Heart</p>
+      <p class="footer-motto" translate="no">乘物以游心</p>
+      <a href="vanholtz.html">另一版视觉</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=ed20261008b"></script>
 </body>
 </html>
