@@ -259,3 +259,79 @@ blockquote cite {
     font-size: 0.9rem;
   }
 }
+
+/* Brittany-style hex logo + loader */
+body.loading { overflow: hidden; }
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  transition: opacity 0.2s ease;
+}
+.loader.is-done {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.loader .logo-wrapper {
+  width: 100px;
+  color: var(--green);
+}
+.loader svg { display: block; width: 100%; height: auto; }
+#loader-letter { opacity: 0; }
+#loader-hex {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.hex-logo {
+  position: relative;
+  display: inline-flex;
+  width: 42px;
+  height: 48px;
+  color: var(--green);
+  margin-bottom: 1.25rem;
+  text-decoration: none !important;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hex-logo .hex-container,
+.hex-logo .logo-container {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hex-logo .hex-container { z-index: 0; }
+.hex-logo .logo-container { z-index: 1; }
+.hex-logo svg { display: block; width: 100%; height: 100%; }
+.hex-logo:hover,
+.hex-logo:focus-visible {
+  outline: 0;
+  transform: translate(-4px, -4px);
+  text-decoration: none;
+}
+.hex-logo:hover .hex-container,
+.hex-logo:focus-visible .hex-container {
+  transform: translate(4px, 3px);
+}
+.hex-logo.is-open,
+.hex-logo[aria-expanded="true"] {
+  transform: translate(-4px, -4px);
+}
+.hex-logo.is-open .hex-container,
+.hex-logo[aria-expanded="true"] .hex-container {
+  transform: translate(4px, 3px);
+}
+
+.mobile-bar .hex-logo {
+  margin: 0;
+  width: 36px;
+  height: 41px;
+}
+.mobile-bar {
+  gap: 0.75rem;
+}
+.mobile-bar strong { margin-right: auto; }
