@@ -6,7 +6,7 @@
   <meta name="description" content="游心 · With Wandering Heart" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <title>游心 · With Wandering Heart</title>
-  <link rel="stylesheet" href="styles.css?v=hex2" />
+  <link rel="stylesheet" href="styles.css?v=sec3" />
 </head>
 <body>
 
@@ -14,15 +14,14 @@
     <div class="logo-wrapper">
       <svg id="loader-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 96" role="img">
         <title>YH</title>
-
-            <defs>
-              <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#64ffda"/>
-                <stop offset="35%" stop-color="#7dd3fc"/>
-                <stop offset="65%" stop-color="#c084fc"/>
-                <stop offset="100%" stop-color="#fb7185"/>
-              </linearGradient>
-            </defs>
+        <defs>
+          <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#64ffda"/>
+            <stop offset="35%" stop-color="#7dd3fc"/>
+            <stop offset="65%" stop-color="#c084fc"/>
+            <stop offset="100%" stop-color="#fb7185"/>
+          </linearGradient>
+        </defs>
         <g transform="translate(3, 3)">
           <polygon id="loader-hex" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" />
           <text id="loader-letter" class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#loaderGrad)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
@@ -34,37 +33,33 @@
   <div class="layout">
     <aside class="sidebar">
       <div class="sidebar-top">
-
-      <a class="hex-logo" href="#about" aria-label="Home">
-        <span class="hex-container" aria-hidden="true">
-          <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
-        </span>
-        <span class="logo-container" aria-hidden="true">
-          <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
-
-            <defs>
-              <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#64ffda"/>
-                <stop offset="35%" stop-color="#7dd3fc"/>
-                <stop offset="65%" stop-color="#c084fc"/>
-                <stop offset="100%" stop-color="#fb7185"/>
-              </linearGradient>
-            </defs>
-            <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
-            <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGrad)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
-          </svg>
-        </span>
-      </a>
-
-        <p class="hello">你好，我是</p>
-        <h1 class="name">游心</h1>
-        <p class="tagline">With Wandering Heart</p>
-        <p class="bio">以「乘物以游心」自勉：随事而行，心有余地。记录工作反思、个人成长与实践项目。</p>
+        <a class="hex-logo" href="#home" aria-label="回到首页">
+          <span class="hex-container" aria-hidden="true">
+            <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
+          </span>
+          <span class="logo-container" aria-hidden="true">
+            <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#64ffda"/>
+                  <stop offset="35%" stop-color="#7dd3fc"/>
+                  <stop offset="65%" stop-color="#c084fc"/>
+                  <stop offset="100%" stop-color="#fb7185"/>
+                </linearGradient>
+              </defs>
+              <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
+              <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGrad)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
+            </svg>
+          </span>
+        </a>
+        <p class="side-name">游心</p>
+        <p class="side-en">With Wandering Heart</p>
         <nav class="side-nav" aria-label="主导航">
-          <a href="#about" class="active" data-nav>01. 关于</a>
+          <a href="#home" class="active" data-nav>00. 首页</a>
+          <a href="#about" data-nav>01. 关于</a>
           <a href="#experience" data-nav>02. 经历</a>
           <a href="#projects" data-nav>03. 项目</a>
-          <a href="#notes" data-nav>04. 摘录</a>
+          <a href="#excerpt" data-nav>04. 摘录</a>
         </nav>
       </div>
       <div class="sidebar-foot">
@@ -73,105 +68,157 @@
     </aside>
 
     <main class="content">
-      <section id="about" class="section">
-        <h2 class="section-label">关于</h2>
-        <p>我是 <strong>jay zhao</strong>（With Wandering Heart）。偏好把复杂事情写清楚，把节奏留在可控范围内。</p>
-        <p class="muted">方向上关注 FDE / AI 落地，也持续整理金融业务与个人成长笔记。</p>
+      <section id="home" class="panel panel-hero">
+        <div class="panel-inner">
+          <a class="hex-logo hero-mark" href="#home" aria-label="游心">
+            <span class="hex-container" aria-hidden="true">
+              <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
+            </span>
+            <span class="logo-container" aria-hidden="true">
+              <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="hexGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#64ffda"/>
+                    <stop offset="35%" stop-color="#7dd3fc"/>
+                    <stop offset="65%" stop-color="#c084fc"/>
+                    <stop offset="100%" stop-color="#fb7185"/>
+                  </linearGradient>
+                </defs>
+                <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
+                <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGradHero)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
+              </svg>
+            </span>
+          </a>
+          <p class="hello">你好，我是</p>
+          <h1 class="name">游心</h1>
+          <p class="tagline">With Wandering Heart</p>
+          <p class="bio">以「乘物以游心」自勉：随事而行，心有余地。记录工作反思、个人成长与实践项目。</p>
+          <a class="scroll-cue" href="#about">01 关于</a>
+        </div>
       </section>
 
-      <section id="experience" class="section">
-        <h2 class="section-label">经历与思考</h2>
-        <ol class="timeline">
-          <li>
-            <h3>少做「看起来忙」的事</h3>
-            <p>每周留一段安静时间，复盘哪些投入真正改变了进度。</p>
-          </li>
-          <li>
-            <h3>把反馈当成原材料</h3>
-            <p>先记下原话，再区分事实与情绪，挑一两处落地。</p>
-          </li>
-          <li>
-            <h3>节奏比冲刺更重要</h3>
-            <p>固定周记与月度回顾，一次只改卡住的一两件事。</p>
-          </li>
-        </ol>
+      <section id="about" class="panel">
+        <div class="panel-inner">
+          <header class="panel-head">
+            <span class="panel-num">01</span>
+            <h2>关于</h2>
+          </header>
+          <div class="panel-rule" aria-hidden="true"></div>
+          <p>我是 <strong>jay zhao</strong>（With Wandering Heart）。偏好把复杂事情写清楚，把节奏留在可控范围内。</p>
+          <p class="muted">方向上关注 FDE / AI 落地，也持续整理金融业务与个人成长笔记。</p>
+        </div>
       </section>
 
-      <section id="projects" class="section">
-        <h2 class="section-label">项目</h2>
-        <ul class="projects">
-          <li>
-            <a class="project" href="https://withwanderingheart.github.io/">
-              <span class="project-title">Personal Site · 游心</span>
-              <span class="project-desc">个人主页：工作反思、成长与实践记录。本站 Brittany 风格版。</span>
-              <span class="project-tags"><span>HTML</span><span>CSS</span><span>Pages</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="project" href="vanholtz.html">
-              <span class="project-title">Personal Site · Van Holtz 风格</span>
-              <span class="project-desc">同内容的另一套视觉实验：深蓝大字号、项目优先。</span>
-              <span class="project-tags"><span>Design</span><span>Static</span></span>
-            </a>
-          </li>
-          <li>
-            <div class="project static">
-              <span class="project-title">TB 业务笔记整理</span>
-              <span class="project-desc">把结算、资金池与收入结构口述整理成可复用的 Obsidian 笔记。</span>
-              <span class="project-tags"><span>Notes</span><span>Finance</span></span>
-            </div>
-          </li>
-        </ul>
+      <section id="experience" class="panel">
+        <div class="panel-inner">
+          <header class="panel-head">
+            <span class="panel-num">02</span>
+            <h2>经历</h2>
+          </header>
+          <div class="panel-rule" aria-hidden="true"></div>
+          <ol class="timeline">
+            <li>
+              <h3>少做「看起来忙」的事</h3>
+              <p>每周留一段安静时间，复盘哪些投入真正改变了进度。</p>
+            </li>
+            <li>
+              <h3>把反馈当成原材料</h3>
+              <p>先记下原话，再区分事实与情绪，挑一两处落地。</p>
+            </li>
+            <li>
+              <h3>节奏比冲刺更重要</h3>
+              <p>固定周记与月度回顾，一次只改卡住的一两件事。</p>
+            </li>
+          </ol>
+        </div>
       </section>
 
-      <section id="notes" class="section">
-        <h2 class="section-label">摘录</h2>
-        <blockquote>
-          <p>乘物以游心。</p>
-          <cite>《庄子·人间世》</cite>
-        </blockquote>
+      <section id="projects" class="panel">
+        <div class="panel-inner">
+          <header class="panel-head">
+            <span class="panel-num">03</span>
+            <h2>项目</h2>
+          </header>
+          <div class="panel-rule" aria-hidden="true"></div>
+          <ul class="projects">
+            <li>
+              <a class="project" href="https://withwanderingheart.github.io/">
+                <span class="project-title">Personal Site · 游心</span>
+                <span class="project-desc">个人主页：工作反思、成长与实践记录。本站 Brittany 风格版。</span>
+                <span class="project-tags"><span>HTML</span><span>CSS</span><span>Pages</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="project" href="vanholtz.html">
+                <span class="project-title">Personal Site · Van Holtz 风格</span>
+                <span class="project-desc">同内容的另一套视觉实验：深蓝大字号、项目优先。</span>
+                <span class="project-tags"><span>Design</span><span>Static</span></span>
+              </a>
+            </li>
+            <li>
+              <div class="project static">
+                <span class="project-title">TB 业务笔记整理</span>
+                <span class="project-desc">把结算、资金池与收入结构口述整理成可复用的 Obsidian 笔记。</span>
+                <span class="project-tags"><span>Notes</span><span>Finance</span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="excerpt" class="panel">
+        <div class="panel-inner">
+          <header class="panel-head">
+            <span class="panel-num">04</span>
+            <h2>摘录</h2>
+          </header>
+          <div class="panel-rule" aria-hidden="true"></div>
+          <blockquote>
+            <p>乘物以游心。</p>
+            <cite>《庄子·人间世》</cite>
+          </blockquote>
+        </div>
       </section>
 
       <footer class="footer">
         <p>© <span id="year"></span> With Wandering Heart</p>
+        <a href="vanholtz.html">Van Holtz 版</a>
       </footer>
     </main>
   </div>
 
   <header class="mobile-bar">
-
-      <a class="hex-logo" href="#about" aria-label="Home">
-        <span class="hex-container" aria-hidden="true">
-          <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
-        </span>
-        <span class="logo-container" aria-hidden="true">
-          <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
-
-            <defs>
-              <linearGradient id="hexGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#64ffda"/>
-                <stop offset="35%" stop-color="#7dd3fc"/>
-                <stop offset="65%" stop-color="#c084fc"/>
-                <stop offset="100%" stop-color="#fb7185"/>
-              </linearGradient>
-            </defs>
-            <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
-            <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGradMobile)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
-          </svg>
-        </span>
-      </a>
-
+    <a class="hex-logo" href="#home" aria-label="回到首页">
+      <span class="hex-container" aria-hidden="true">
+        <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
+      </span>
+      <span class="logo-container" aria-hidden="true">
+        <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hexGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#64ffda"/>
+              <stop offset="35%" stop-color="#7dd3fc"/>
+              <stop offset="65%" stop-color="#c084fc"/>
+              <stop offset="100%" stop-color="#fb7185"/>
+            </linearGradient>
+          </defs>
+          <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
+          <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGradMobile)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
+        </svg>
+      </span>
+    </a>
     <strong>游心</strong>
-    <button type="button" id="menuBtn" aria-label="打开菜单">菜单</button>
+    <button type="button" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileNav">菜单</button>
   </header>
   <nav class="mobile-nav" id="mobileNav" hidden>
-    <a href="#about">关于</a>
-    <a href="#experience">经历</a>
-    <a href="#projects">项目</a>
-    <a href="#notes">摘录</a>
+    <a href="#home" data-nav>首页</a>
+    <a href="#about" data-nav>关于</a>
+    <a href="#experience" data-nav>经历</a>
+    <a href="#projects" data-nav>项目</a>
+    <a href="#excerpt" data-nav>摘录</a>
     <a href="vanholtz.html">Van Holtz 版</a>
   </nav>
 
-  <script src="script.js?v=hex2"></script>
+  <script src="script.js?v=sec3"></script>
 </body>
 </html>
