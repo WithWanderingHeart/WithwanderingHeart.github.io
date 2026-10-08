@@ -3,133 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="With Wandering Heart — 乘物以游心" />
-  <title>With Wandering Heart · 游心</title>
+  <meta name="description" content="With Wandering Heart · 游心 — 乘物以游心" />
+  <title>游心 · With Wandering Heart</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="aurora" aria-hidden="true">
-    <div class="blob blob-a"></div>
-    <div class="blob blob-b"></div>
-    <div class="blob blob-c"></div>
-    <div class="wave"></div>
-  </div>
+  <canvas id="water" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <a class="brand" href="#top">游心</a>
-    <nav class="nav" aria-label="主导航">
-      <a href="#about">关于</a>
+  <main class="stage">
+    <p class="eyebrow">《庄子·人间世》</p>
+    <h1>游心</h1>
+    <p class="ename">With Wandering Heart</p>
+    <p class="quote">乘物以游心</p>
+    <p class="lead">
+      随事而行，心有余地。<br />
+      工作反思 · 个人成长 · 实践经验
+    </p>
+    <nav class="links" aria-label="分区">
       <a href="#work">工作</a>
       <a href="#growth">成长</a>
       <a href="#practice">实践</a>
     </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <p class="eyebrow">《庄子·人间世》</p>
-      <h1>乘物以游心</h1>
-      <p class="hero-sub">With Wandering Heart · 游心</p>
-      <p class="hero-lead">
-        随事而行，心有余地。在工作反思、个人成长与实践经验里，留下可复用的痕迹。
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#about">开始阅读</a>
-        <a class="btn ghost" href="#notes">一句摘录</a>
-      </div>
-    </section>
-
-    <section id="about" class="panel">
-      <div class="panel-head">
-        <h2>关于</h2>
-        <p>深蓝如水，缓缓前行。</p>
-      </div>
-      <div class="glass about-card">
-        <p>
-          我是 jay zhao（With Wandering Heart）。以「乘物以游心」自勉：
-          不与事相抗，也不被事淹没；把注意力留给真正重要的节奏与判断。
-        </p>
-        <p class="muted">
-          这条主页记录工作中的思考、成长里的小调整，以及动手实践留下的经验。
-        </p>
-      </div>
-    </section>
-
-    <section id="work" class="panel">
-      <div class="panel-head">
-        <h2>工作反思</h2>
-        <p>协作、决策与节奏</p>
-      </div>
-      <div class="grid">
-        <article class="glass card">
-          <h3>少做「看起来忙」的事</h3>
-          <p>会议与即时消息容易填满日程。每周留一段安静时间，复盘哪些投入真正改变了进度。</p>
-        </article>
-        <article class="glass card">
-          <h3>把反馈当成原材料</h3>
-          <p>先记下原话，再区分事实与情绪，最后挑一两处可执行的改进点落地。</p>
-        </article>
-        <article class="glass card">
-          <h3>节奏比冲刺更重要</h3>
-          <p>短期爆发容易透支判断力。固定周记与月度回顾，一次只改卡住的一两件事。</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="growth" class="panel">
-      <div class="panel-head">
-        <h2>个人成长</h2>
-        <p>学习、习惯与心态</p>
-      </div>
-      <div class="grid">
-        <article class="glass card">
-          <h3>深度阅读胜过碎片刷屏</h3>
-          <p>每天留出一小段完整阅读，用两三句话写给未来的自己。</p>
-        </article>
-        <article class="glass card">
-          <h3>用输出倒逼输入</h3>
-          <p>学完一个概念就试着讲清楚。说不清楚的地方，往往就是理解还不够扎实的地方。</p>
-        </article>
-        <article class="glass card">
-          <h3>允许缓慢进步</h3>
-          <p>成长很少是直线。把注意力放在可重复的小动作上。</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="practice" class="panel">
-      <div class="panel-head">
-        <h2>实践经验</h2>
-        <p>动手、踩坑、再试一次</p>
-      </div>
-      <div class="grid">
-        <article class="glass card">
-          <h3>先做最小可用版本</h3>
-          <p>用最短路径验证核心假设，再决定是否加功能。</p>
-        </article>
-        <article class="glass card">
-          <h3>文档写给三个月后的自己</h3>
-          <p>记录「为什么这样做」比只写步骤更有用。</p>
-        </article>
-        <article class="glass card">
-          <h3>工具服务于问题</h3>
-          <p>选对问题边界后，工具选择通常会自然收敛。</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="notes" class="panel quote-panel">
-      <blockquote class="glass quote">
-        <p>「乘物以游心。」</p>
-        <cite>《庄子·人间世》</cite>
-      </blockquote>
-    </section>
   </main>
 
-  <footer class="footer">
+  <section id="work" class="band">
+    <h2>工作反思</h2>
+    <div class="cards">
+      <article><h3>少做「看起来忙」的事</h3><p>每周留一段安静时间，复盘哪些投入真正改变了进度。</p></article>
+      <article><h3>把反馈当成原材料</h3><p>先记下原话，再区分事实与情绪，挑一两处落地。</p></article>
+      <article><h3>节奏比冲刺更重要</h3><p>固定周记与月度回顾，一次只改卡住的一两件事。</p></article>
+    </div>
+  </section>
+
+  <section id="growth" class="band band-alt">
+    <h2>个人成长</h2>
+    <div class="cards">
+      <article><h3>深度阅读</h3><p>用完整章节换碎片刷屏，读完写两三句给未来的自己。</p></article>
+      <article><h3>用输出倒逼输入</h3><p>讲不清楚的地方，往往就是理解还不够扎实的地方。</p></article>
+      <article><h3>允许缓慢进步</h3><p>成长很少是直线，把注意力放在可重复的小动作上。</p></article>
+    </div>
+  </section>
+
+  <section id="practice" class="band">
+    <h2>实践经验</h2>
+    <div class="cards">
+      <article><h3>最小可用版本</h3><p>先验证核心假设，再决定是否加功能。</p></article>
+      <article><h3>写给三个月后的自己</h3><p>记录「为什么这样做」比只写步骤更有用。</p></article>
+      <article><h3>工具服务于问题</h3><p>选对问题边界后，工具选择通常会自然收敛。</p></article>
+    </div>
+  </section>
+
+  <footer>
     <p>© <span id="year"></span> With Wandering Heart · 游心</p>
   </footer>
 
