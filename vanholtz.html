@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="游心 · With Wandering Heart" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>游心 · Van Holtz 风格</title>
+  <style>
+    :root {
+      --bg: #061428;
+      --text: #f4f7fb;
+      --muted: #9eb0c8;
+      --line: rgba(255,255,255,0.14);
+      --accent: #7eb6ff;
+      --sans: "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(60,120,200,0.28), transparent 55%),
+        linear-gradient(180deg, #0a1c38 0%, #061428 45%, #040e1c 100%);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, calc(100% - 2.5rem)); margin: 0 auto; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { letter-spacing: 0.18em; font-weight: 600; font-size: 0.92rem; }
+    .nav { display: flex; gap: 1.25rem; color: var(--muted); font-size: 0.92rem; }
+    .nav a:hover { color: var(--text); }
+
+    .hero {
+      padding: 5.5rem 0 4rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-kicker {
+      margin: 0 0 1rem;
+      color: var(--accent);
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      max-width: 12ch;
+    }
+    .hero h1 span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.28em;
+      letter-spacing: 0.18em;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    .hero-lead {
+      margin: 1.8rem 0 0;
+      max-width: 28rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    .cta {
+      display: inline-flex;
+      margin-top: 2rem;
+      padding: 0.85rem 1.3rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .cta:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3); }
+
+    .projects { padding: 3.5rem 0 4rem; }
+    .projects h2 {
+      margin: 0 0 1.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .plist { list-style: none; margin: 0; padding: 0; }
+    .plist li { border-top: 1px solid var(--line); }
+    .plist li:last-child { border-bottom: 1px solid var(--line); }
+    .prow {
+      display: grid;
+      grid-template-columns: 1.2fr 1.6fr auto;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.6rem 0.2rem;
+      transition: background 0.2s ease, padding-left 0.2s ease;
+    }
+    .prow:hover { background: rgba(255,255,255,0.03); padding-left: 0.6rem; }
+    .prow .t {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+    .prow .d { color: var(--muted); font-size: 0.98rem; }
+    .prow .m { color: var(--accent); font-size: 0.85rem; letter-spacing: 0.08em; }
+
+    .about {
+      padding: 3rem 0 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 2rem;
+      border-top: 1px solid var(--line);
+    }
+    .about h2 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .about p { margin: 0 0 1rem; color: var(--muted); max-width: 36rem; }
+    .quote {
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      font-size: 1.35rem;
+      letter-spacing: 0.16em;
+    }
+
+    footer {
+      padding: 1.5rem 0 2.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+      .nav { gap: 0.8rem; font-size: 0.82rem; }
+      .hero { padding: 3.5rem 0 2.8rem; }
+      .prow { grid-template-columns: 1fr; gap: 0.45rem; padding: 1.25rem 0; }
+      .about { grid-template-columns: 1fr; }
+      .prow .m { order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="vanholtz.html">游心</a>
+      <nav class="nav" aria-label="导航">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="index.html">Brittany 版</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <p class="hero-kicker">乘物以游心</p>
+      <h1>With Wandering Heart<span>游心 · Personal Site</span></h1>
+      <p class="hero-lead">深蓝夜色里，把工作反思、个人成长与实践项目排成清晰节奏。</p>
+      <a class="cta" href="#projects">查看项目</a>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>Selected Work</h2>
+      <ul class="plist">
+        <li>
+          <a class="prow" href="index.html">
+            <div class="t">Personal Site · Brittany</div>
+            <div class="d">克制留白、侧栏导航的个人主页实验。</div>
+            <div class="m">01</div>
+          </a>
+        </li>
+        <li>
+          <a class="prow" href="vanholtz.html">
+            <div class="t">Personal Site · This Page</div>
+            <div class="d">大字号、项目优先的深蓝夜间版。</div>
+            <div class="m">02</div>
+          </a>
+        </li>
+        <li>
+          <div class="prow">
+            <div class="t">TB Notes System</div>
+            <div class="d">结算与资金池口述整理成可检索业务笔记。</div>
+            <div class="m">03</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="about" id="about">
+      <h2>游心</h2>
+      <div>
+        <p>我是 jay zhao（With Wandering Heart）。关注 FDE / AI 落地，也持续整理金融业务与成长记录。</p>
+        <p>偏好清楚的结构、克制的表达，以及能长期复用的小系统。</p>
+        <p class="quote">乘物以游心。</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> With Wandering Heart</span>
+      <a href="index.html">切换到 Brittany 风格版</a>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
