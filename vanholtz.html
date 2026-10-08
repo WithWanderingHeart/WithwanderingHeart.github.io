@@ -2,218 +2,496 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="游心 · With Wandering Heart" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
+  <meta name="description" content="游心 · With Wandering Heart — personal site" />
   <meta http-equiv="Cache-Control" content="no-cache" />
-  <title>游心 · Van Holtz 风格</title>
+  <title>游心 · With Wandering Heart</title>
   <style>
     :root {
-      --bg: #061428;
-      --text: #f4f7fb;
-      --muted: #9eb0c8;
-      --line: rgba(255,255,255,0.14);
-      --accent: #7eb6ff;
-      --sans: "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --bg: #4801ff;
+      --ink: #000;
+      --ui: #fff;
+      --ui-muted: #f2f2f2;
+      --display: "Arial Black", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Impact, sans-serif;
+      --ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
     body {
-      margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(900px 500px at 80% -10%, rgba(60,120,200,0.28), transparent 55%),
-        linear-gradient(180deg, #0a1c38 0%, #061428 45%, #040e1c 100%);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.55;
+      background: var(--bg);
+      color: var(--ui-muted);
+      font-family: var(--ui-font);
+      font-size: 14px;
+      font-weight: 400;
+      overflow-x: hidden;
+      transition: background-color .5s, color .5s;
+      -webkit-font-smoothing: antialiased;
     }
+    body.night-mode { --bg: #000; --ink: #f2f2f2; }
+    body.light-mode { --bg: #f2f2f2; --ink: #151515; --ui: #151515; --ui-muted: #222; }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1100px, calc(100% - 2.5rem)); margin: 0 auto; }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .brand { letter-spacing: 0.18em; font-weight: 600; font-size: 0.92rem; }
-    .nav { display: flex; gap: 1.25rem; color: var(--muted); font-size: 0.92rem; }
-    .nav a:hover { color: var(--text); }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
 
-    .hero {
-      padding: 5.5rem 0 4rem;
-      border-bottom: 1px solid var(--line);
+    /* Stage + 3D project staircase */
+    .stage {
+      position: relative;
+      min-height: 100vh;
+      padding: 8vh 4vw 28vh 0;
+      perspective: 1200px;
+      perspective-origin: 85% 40%;
     }
-    .hero-kicker {
+    .projects {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 95%;
+      margin-left: auto;
+      text-align: right;
+      transform-style: preserve-3d;
+    }
+    .projects.is-hovering .project-link { opacity: .35; }
+    .projects.is-hovering li:hover .project-link { opacity: 1; }
+    .project-li { transform-style: preserve-3d; cursor: pointer; }
+    .project-box {
+      transform: rotateY(-45deg) translateZ(0);
+      transform-origin: right center;
+      transform-style: preserve-3d;
+      transition: transform 1.5s cubic-bezier(.075,.82,.165,1);
+      will-change: transform;
+    }
+    .project-li:hover .project-box,
+    .project-li.is-hovered .project-box {
+      transform: rotateY(-35deg) translateZ(0);
+      transition-duration: 1s;
+    }
+    .project-li.is-selected .project-box,
+    .project-li.is-selected:hover .project-box {
+      transform: rotateY(0deg) translateZ(0);
+    }
+    .project-link {
+      position: relative;
+      display: inline-block;
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(48px, 7.4vw, 140px);
+      line-height: .85;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--ink);
+      -webkit-text-stroke: 0 transparent;
+      transition: color .35s ease, -webkit-text-stroke .35s ease, opacity .35s ease;
+      padding-right: 2vw;
+    }
+    body.night-mode .project-link {
+      color: transparent;
+      -webkit-text-stroke: 2px #f2f2f2;
+    }
+    body.night-mode .projects.is-hovering li:hover .project-link,
+    body.night-mode .project-li.is-selected .project-link {
+      color: #f2f2f2;
+      -webkit-text-stroke: 0 transparent;
+    }
+    body.ultra-mode .projects.is-hovering li:hover .project-link,
+    body.ultra-mode .project-li.is-selected .project-link {
+      color: transparent;
+      -webkit-text-stroke: 3px #000;
+    }
+    body.light-mode .projects.is-hovering li:hover .project-link,
+    body.light-mode .project-li.is-selected .project-link {
+      color: transparent;
+      -webkit-text-stroke: 3px #151515;
+    }
+    .project-link::before {
+      content: attr(data-year);
+      position: absolute;
+      top: 3.2em;
+      left: -220px;
+      width: 180px;
+      text-align: right;
+      font-family: var(--ui-font);
+      font-size: max(10px, .7vw);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1;
+      color: var(--ink) !important;
+      -webkit-text-stroke: 0 !important;
+      pointer-events: none;
+      text-transform: none;
+    }
+    .project-link::after {
+      content: "";
+      position: absolute;
+      top: .28em;
+      left: -.25em;
+      width: 2px;
+      height: .85em;
+      background: var(--ink);
+      transform: rotate(25deg);
+      pointer-events: none;
+    }
+    body.night-mode .project-link::after { background: #f2f2f2; }
+
+    /* Fixed bottom UI bar */
+    .ui {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      pointer-events: none;
+      color: var(--ui);
+    }
+    .ui a, .ui button { pointer-events: auto; }
+    .logo {
+      position: absolute;
+      bottom: calc(7.5vh + 64px);
+      left: 48px;
+      z-index: 2;
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 36px;
+      line-height: .85;
+      text-transform: uppercase;
+      color: #fff;
+      pointer-events: auto;
+    }
+    body.light-mode .logo { color: #151515; }
+    .logo span { display: block; }
+    .logo:hover { color: transparent; -webkit-text-stroke: 1px #fff; }
+    body.ultra-mode .logo:hover { color: #4801ff; -webkit-text-stroke: 1px #fff; }
+    body.light-mode .logo:hover { color: transparent; -webkit-text-stroke: 1px #151515; }
+
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0 48px 3.5vh;
+      gap: 28px 40px;
+      align-items: flex-end;
+      justify-content: space-between;
+      pointer-events: auto;
+    }
+    .info .left, .info .right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px 36px;
+      align-items: flex-end;
+    }
+    .contact {
+      display: flex;
+      gap: 28px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .contact ul { list-style: none; margin: 0; padding: 0; }
+    .contact a strong { font-weight: 700; }
+    .links ul, .social ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .links span, .social span {
+      display: inline-block;
+      min-width: 1.4em;
+      opacity: .85;
+      font-weight: 400;
+    }
+    .links strong, .social strong { font-weight: 700; }
+    .links li + li, .social li + li { margin-top: .15em; }
+    .links a:hover strong, .social a:hover strong, .links button:hover strong {
+      text-decoration: underline;
+    }
+    .credits {
+      font-size: 11px;
+      line-height: 1.35;
+      text-align: right;
+    }
+    .credits .label { opacity: .75; }
+    .color-mode {
+      position: relative;
+      width: 54px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.55);
+      display: flex;
+      overflow: hidden;
+    }
+    body.light-mode .color-mode { border-color: rgba(0,0,0,.35); }
+    .color-mode button {
+      flex: 1;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    .color-mode .dot {
+      position: absolute;
+      top: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #000;
+      transition: left .35s cubic-bezier(.075,.82,.165,1);
+      pointer-events: none;
+    }
+    body.night-mode .color-mode .dot { left: 3px; background: #f2f2f2; }
+    body.light-mode .color-mode .dot { left: 20px; background: #000; }
+    body.ultra-mode .color-mode .dot { left: 37px; background: #000; }
+
+    .copyright {
+      position: absolute;
+      right: 48px;
+      bottom: .6vh;
+      font-size: 10px;
+      opacity: .45;
+      color: #fff;
+      pointer-events: none;
+    }
+    body.light-mode .copyright { color: #151515; }
+
+    /* About overlay */
+    .about {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4vw;
+      padding: 12vh 8vw 18vh;
+      background: rgba(72, 1, 255, .92);
+      color: #f2f2f2;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .45s ease;
+      overflow: auto;
+    }
+    body.night-mode .about { background: rgba(0,0,0,.92); }
+    body.light-mode .about { background: rgba(242,242,242,.96); color: #151515; }
+    body.about-open .about { opacity: 1; pointer-events: auto; }
+    .about h2 {
       margin: 0 0 1rem;
-      color: var(--accent);
-      letter-spacing: 0.28em;
-      font-size: 0.78rem;
+      font-family: var(--display);
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: .95;
       text-transform: uppercase;
     }
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(3rem, 10vw, 6.5rem);
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      font-weight: 700;
-      max-width: 12ch;
+    .about p { margin: 0 0 1rem; max-width: 36rem; line-height: 1.55; font-size: 15px; }
+    .about .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2rem;
+      font-size: 13px;
+      line-height: 1.45;
     }
-    .hero h1 span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.28em;
-      letter-spacing: 0.18em;
-      margin-top: 1rem;
+    .about .meta h5 {
+      margin: 0 0 .35rem;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .7;
       font-weight: 500;
     }
-    .hero-lead {
-      margin: 1.8rem 0 0;
-      max-width: 28rem;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-    .cta {
-      display: inline-flex;
-      margin-top: 2rem;
-      padding: 0.85rem 1.3rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-    .cta:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3); }
-
-    .projects { padding: 3.5rem 0 4rem; }
-    .projects h2 {
-      margin: 0 0 1.5rem;
-      font-size: 0.85rem;
-      letter-spacing: 0.22em;
-      color: var(--muted);
+    .about .meta h6 { margin: 0 0 .35rem; font-size: 14px; }
+    .about .meta ul { margin: 0; padding-left: 1.1em; }
+    .about-close {
+      position: absolute;
+      top: 28px;
+      right: 36px;
+      font-size: 12px;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
-    .plist { list-style: none; margin: 0; padding: 0; }
-    .plist li { border-top: 1px solid var(--line); }
-    .plist li:last-child { border-bottom: 1px solid var(--line); }
-    .prow {
-      display: grid;
-      grid-template-columns: 1.2fr 1.6fr auto;
-      gap: 1.5rem;
-      align-items: center;
-      padding: 1.6rem 0.2rem;
-      transition: background 0.2s ease, padding-left 0.2s ease;
-    }
-    .prow:hover { background: rgba(255,255,255,0.03); padding-left: 0.6rem; }
-    .prow .t {
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 650;
-      letter-spacing: -0.01em;
-    }
-    .prow .d { color: var(--muted); font-size: 0.98rem; }
-    .prow .m { color: var(--accent); font-size: 0.85rem; letter-spacing: 0.08em; }
 
-    .about {
-      padding: 3rem 0 4rem;
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 2rem;
-      border-top: 1px solid var(--line);
-    }
-    .about h2 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-    }
-    .about p { margin: 0 0 1rem; color: var(--muted); max-width: 36rem; }
-    .quote {
-      margin-top: 1.5rem;
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--line);
-      font-size: 1.35rem;
-      letter-spacing: 0.16em;
-    }
-
-    footer {
-      padding: 1.5rem 0 2.5rem;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.88rem;
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 800px) {
-      .nav { gap: 0.8rem; font-size: 0.82rem; }
-      .hero { padding: 3.5rem 0 2.8rem; }
-      .prow { grid-template-columns: 1fr; gap: 0.45rem; padding: 1.25rem 0; }
-      .about { grid-template-columns: 1fr; }
-      .prow .m { order: -1; }
+    @media (max-width: 900px) {
+      .logo { left: 24px; bottom: auto; top: 24px; font-size: 22px; position: fixed; }
+      .info { padding: 0 24px 2.5vh; gap: 16px; }
+      .contact { flex-direction: column; gap: 8px; }
+      .project-link { font-size: 13vw; }
+      .project-link::before { display: none; }
+      .project-box { transform: none !important; }
+      .about { grid-template-columns: 1fr; padding: 10vh 6vw 12vh; }
+      .about .meta { grid-template-columns: 1fr; }
+      .copyright { right: 24px; }
     }
   </style>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="vanholtz.html">游心</a>
-      <nav class="nav" aria-label="导航">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="index.html">Brittany 版</a>
-      </nav>
-    </header>
+<body class="ultra-mode">
+  <main class="stage">
+    <ul class="projects" id="projects">
+      <li class="project-li">
+        <div class="project-box">
+          <a class="project-link" href="index.html" data-year="2026">Brittany<br>Site</a>
+        </div>
+      </li>
+      <li class="project-li is-selected">
+        <div class="project-box">
+          <a class="project-link" href="vanholtz.html" data-year="2026">This<br>Page</a>
+        </div>
+      </li>
+      <li class="project-li">
+        <div class="project-box">
+          <a class="project-link" href="#about" data-year="2026">TB<br>Notes</a>
+        </div>
+      </li>
+      <li class="project-li">
+        <div class="project-box">
+          <a class="project-link" href="#about" data-year="2026">游心<br>Journal</a>
+        </div>
+      </li>
+      <li class="project-li">
+        <div class="project-box">
+          <a class="project-link" href="https://github.com/WithWanderingHeart" data-year="2026">GitHub<br>Pages</a>
+        </div>
+      </li>
+      <li class="project-li">
+        <div class="project-box">
+          <a class="project-link" href="#about" data-year="2026">乘物以<br>游心</a>
+        </div>
+      </li>
+    </ul>
+  </main>
 
-    <section class="hero">
-      <p class="hero-kicker">乘物以游心</p>
-      <h1>With Wandering Heart<span>游心 · Personal Site</span></h1>
-      <p class="hero-lead">深蓝夜色里，把工作反思、个人成长与实践项目排成清晰节奏。</p>
-      <a class="cta" href="#projects">查看项目</a>
-    </section>
-
-    <section class="projects" id="projects">
-      <h2>Selected Work</h2>
-      <ul class="plist">
-        <li>
-          <a class="prow" href="index.html">
-            <div class="t">Personal Site · Brittany</div>
-            <div class="d">克制留白、侧栏导航的个人主页实验。</div>
-            <div class="m">01</div>
-          </a>
-        </li>
-        <li>
-          <a class="prow" href="vanholtz.html">
-            <div class="t">Personal Site · This Page</div>
-            <div class="d">大字号、项目优先的深蓝夜间版。</div>
-            <div class="m">02</div>
-          </a>
-        </li>
-        <li>
-          <div class="prow">
-            <div class="t">TB Notes System</div>
-            <div class="d">结算与资金池口述整理成可检索业务笔记。</div>
-            <div class="m">03</div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section class="about" id="about">
-      <h2>游心</h2>
-      <div>
-        <p>我是 jay zhao（With Wandering Heart）。关注 FDE / AI 落地，也持续整理金融业务与成长记录。</p>
-        <p>偏好清楚的结构、克制的表达，以及能长期复用的小系统。</p>
-        <p class="quote">乘物以游心。</p>
+  <div class="ui" id="ui">
+    <a class="logo" href="vanholtz.html" aria-label="游心">
+      <span>游</span>
+      <span>心</span>
+      <span>YH.</span>
+    </a>
+    <div class="info">
+      <div class="left">
+        <div class="contact">
+          <ul>
+            <li>jay zhao</li>
+            <li>With Wandering Heart</li>
+          </ul>
+          <ul>
+            <li>Shanghai</li>
+            <li class="email"><a href="https://github.com/WithWanderingHeart"><strong>GitHub</strong></a></li>
+          </ul>
+        </div>
+        <nav class="links" aria-label="site">
+          <ul>
+            <li><button type="button" id="aboutBtn"><span>01</span> <strong>about</strong></button></li>
+            <li><a href="index.html"><span>02</span> <strong>brittany</strong></a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-
-    <footer>
-      <span>© <span id="year"></span> With Wandering Heart</span>
-      <a href="index.html">切换到 Brittany 风格版</a>
-    </footer>
+      <div class="right">
+        <nav class="social" aria-label="links">
+          <ul>
+            <li><a href="https://withwanderingheart.github.io/"><span>03</span> <strong>home</strong></a></li>
+            <li><a href="https://github.com/WithWanderingHeart/WithwanderingHeart.github.io"><span>04</span> <strong>repo</strong></a></li>
+            <li><a href="index.html"><span>05</span> <strong>alt layout</strong></a></li>
+          </ul>
+        </nav>
+        <div class="credits">
+          <div class="label">inspired by</div>
+          <div><strong>vanholtz.co</strong></div>
+        </div>
+        <div class="color-mode" aria-label="color mode">
+          <div class="dot" id="modeDot"></div>
+          <button type="button" data-mode="night-mode" aria-label="Night"></button>
+          <button type="button" data-mode="light-mode" aria-label="Light"></button>
+          <button type="button" data-mode="ultra-mode" aria-label="Ultra"></button>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> With Wandering Heart</div>
   </div>
+
+  <aside class="about" id="about" aria-hidden="true">
+    <button class="about-close" type="button" id="aboutClose">close</button>
+    <div>
+      <h2>游心</h2>
+      <p>Specializing in clear structure and reusable small systems — with a focus on FDE / AI落地, finance-business notes, and personal growth writing.</p>
+      <p>Partnering with my own curiosity: record work reflections, keep rhythm, and ship small public experiments.</p>
+      <p>乘物以游心 — move with things, keep the heart free.</p>
+    </div>
+    <div class="meta">
+      <div>
+        <h5>Availability</h5>
+        <h6>2026 —</h6>
+        <p>Shanghai / remote-friendly learning</p>
+        <h5>Focus</h5>
+        <h6>Practice —</h6>
+        <ul>
+          <li>FDE / AI implementation</li>
+          <li>TB settlement notes</li>
+          <li>Personal site experiments</li>
+          <li>Weekly reflection</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Selected</h5>
+        <h6>Pages —</h6>
+        <ul>
+          <li>Brittany-style index</li>
+          <li>This Van Holtz-inspired page</li>
+          <li>GitHub Pages deploy</li>
+        </ul>
+        <h5>Quote</h5>
+        <h6>庄子 · 人间世 —</h6>
+        <p>乘物以游心。</p>
+      </div>
+    </div>
+  </aside>
+
   <script>
     document.getElementById("year").textContent = String(new Date().getFullYear());
+
+    const body = document.body;
+    const projects = document.getElementById("projects");
+    const about = document.getElementById("about");
+    const modes = ["night-mode", "light-mode", "ultra-mode"];
+
+    function setMode(mode) {
+      modes.forEach((m) => body.classList.remove(m));
+      body.classList.add(mode);
+      try { localStorage.setItem("vh-mode", mode); } catch (e) {}
+    }
+    try {
+      const saved = localStorage.getItem("vh-mode");
+      if (modes.includes(saved)) setMode(saved);
+    } catch (e) {}
+
+    document.querySelectorAll(".color-mode button").forEach((btn) => {
+      btn.addEventListener("click", () => setMode(btn.getAttribute("data-mode")));
+    });
+
+    projects.addEventListener("mouseenter", () => projects.classList.add("is-hovering"));
+    projects.addEventListener("mouseleave", () => projects.classList.remove("is-hovering"));
+
+    projects.querySelectorAll(".project-li").forEach((li) => {
+      li.addEventListener("mouseenter", () => li.classList.add("is-hovered"));
+      li.addEventListener("mouseleave", () => li.classList.remove("is-hovered"));
+      li.addEventListener("click", () => {
+        projects.querySelectorAll(".project-li").forEach((x) => x.classList.remove("is-selected"));
+        li.classList.add("is-selected");
+      });
+    });
+
+    function openAbout() {
+      body.classList.add("about-open");
+      about.setAttribute("aria-hidden", "false");
+    }
+    function closeAbout() {
+      body.classList.remove("about-open");
+      about.setAttribute("aria-hidden", "true");
+    }
+    document.getElementById("aboutBtn").addEventListener("click", openAbout);
+    document.getElementById("aboutClose").addEventListener("click", closeAbout);
+    about.addEventListener("click", (e) => { if (e.target === about) closeAbout(); });
+    document.querySelectorAll('a[href="#about"]').forEach((a) => {
+      a.addEventListener("click", (e) => { e.preventDefault(); openAbout(); });
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeAbout();
+    });
   </script>
 </body>
 </html>
