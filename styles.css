@@ -335,3 +335,7 @@ body.loading { overflow: hidden; }
   gap: 0.75rem;
 }
 .mobile-bar strong { margin-right: auto; }
+
+.hex-letter {
+  paint-order: stroke fill;
+}
