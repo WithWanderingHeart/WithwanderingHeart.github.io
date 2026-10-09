@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="把 AI 放进真实流程。关于 FDE 的一则兴趣笔记：少停在演示，先看输入、责任和退路。" />
+  <meta name="author" content="jay zhao" />
+  <meta name="theme-color" content="#090b0e" />
+  <meta property="og:title" content="把 AI 放进真实流程 · 游心" />
+  <meta property="og:description" content="FDE 对我意味着站在使用现场。这篇只写兴趣和判断标准，不写没有发生过的结果。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://withwanderingheart.github.io/writing/fde.html" />
+  <title>把 AI 放进真实流程 · 游心</title>
+  <link rel="canonical" href="https://withwanderingheart.github.io/writing/fde.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 96'%3E%3Cpolygon points='39 0 0 22 0 67 39 90 78 68 78 23' fill='%23090b0e' stroke='%2364ffda' stroke-width='6'/%3E%3Ctext x='39' y='58' text-anchor='middle' font-size='34' font-family='ui-monospace,monospace' font-weight='700' fill='%237dd3fc'%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../styles.css?v=hq20261009a" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="article">
+
+  <a class="skip" href="#article">跳到正文</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">
+        <span class="hex-logo" aria-hidden="true">
+          <span class="hex-container">
+            <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
+          </span>
+          <span class="logo-container">
+            <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#64ffda"/>
+                  <stop offset="35%" stop-color="#7dd3fc"/>
+                  <stop offset="65%" stop-color="#c084fc"/>
+                  <stop offset="100%" stop-color="#fb7185"/>
+                </linearGradient>
+              </defs>
+              <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
+              <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGrad)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
+            </svg>
+          </span>
+        </span>
+        <span class="brand-name" translate="no">游心</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="index.html" aria-current="page">文章</a>
+        <a href="../index.html#about">关于</a>
+      </nav>
+      <a class="header-alt" href="../vanholtz.html">另一版</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="打开菜单">
+        <span class="menu-lines" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" hidden aria-label="菜单">
+    <a href="../index.html">首页</a>
+    <a href="index.html" aria-current="page">文章</a>
+    <a href="../index.html#about">关于</a>
+    <a class="mobile-alt" href="../vanholtz.html">另一版视觉</a>
+  </nav>
+
+  <main id="article">
+    <article>
+      <header class="article-hero">
+        <div class="narrow">
+          <p class="crumb"><a href="index.html">文章</a> <span aria-hidden="true">/</span> <a href="../index.html">首页</a></p>
+          <time datetime="2026-10-08">2026.10.08</time>
+          <h1>把 AI 放进真实流程</h1>
+          <p class="dek-en" lang="en">An interest note on forward deployed work.</p>
+          <p class="dek">少停在演示。先看输入从哪来，谁对结果负责，错了怎么退回。</p>
+        </div>
+      </header>
+      <div class="article-body">
+        <div class="narrow prose">
+          <aside class="note">
+            <p>这是兴趣和方向，不是岗位说明。我没有在这里写客户、团队或上线成绩。后面若写到具体做法，也只写自己验证过的步骤。</p>
+          </aside>
+
+          <p><span lang="en">FDE</span>，<span lang="en">forward deployed engineer</span>。我把它理解成一种位置：人站在使用现场，而不是只站在模型旁边。模型可以很能说。现场要回答的是另一组问题：这步原来谁在做，输入从哪来，输出交到谁手里，错了能不能退回去。</p>
+          <p>我现在往这个方向走，是因为反复看见同一个落差。演示里，回答往往完整、流畅、让人点头。放进真实流程，卡住的地方常常不是「它会不会说话」，而是这句话能不能接上下一步。</p>
+          <p>交易银行的学习让我对这一点更敏感。结算、余额、收益，每一层都有自己的口径。一个讲得很顺的总结，如果对不上单据、账户或待办，就还停在演示。演示解决的是观看，流程解决的是交接。</p>
+
+          <h2>我现在在意的四件事</h2>
+          <ol>
+            <li><strong>流程先于提示词。</strong>先画出现在人怎么做，标出哪一步重复、哪一步需要判断、哪一步错了很贵。然后才决定模型进哪一步。顺序反了，提示词会变成另一场演示。</li>
+            <li><strong>输出要能被下一步使用。</strong>一段漂亮的文字如果不能对上账户、单据、例外队列或一条待办，就还没有进入流程。能被使用，是指下一个人或下一个系统不用重新理解一遍。</li>
+            <li><strong>失败要可见。</strong>在业务场景里，沉默的错误比不会回答更贵。要能看出模型没把握、输入缺了、或者结果不该自动往下走。退路是设计的一部分，不是上线以后再补的态度。</li>
+            <li><strong>一次只嵌进一个环节。</strong>对账里的一个例外、纪要里的一个待办、分类里的一个队列，选一个能在较短时间里看见差别的切口。切口多了，就分不清是模型有用，还是人更用力了。</li>
+          </ol>
+
+          <h2>和「游心」的关系</h2>
+          <p>放进流程，不是把心交出去。工具是物。乘物，是借它把一件重复的事走完；游心，是还留着解释的余地：这一步为什么交给模型，哪一步必须人看。</p>
+          <p>所以我不用「用了 AI」当作结论。能写下来的，是某个环节前后差在哪里：输入变清楚了，退路被标出来了，或者发现这一步根本不该自动化。最后一种也算看清，而且经常更值钱。</p>
+
+          <h2>这页暂时不写的</h2>
+          <p>不写没有发生过的案例，不写说不清出处的效率数字，也不把兴趣写成已经完成的事业。方向就一句：少停在演示，把 AI 放进真实流程。</p>
+          <p>若要看这句话从哪来，回到<a href="chengwu.html">乘物以游心</a>。若要看我怎么把一件业务收成能复述的链，读<a href="settlement-to-yield.html">从结算走到收益</a>。两篇都是同一标准：写到能重讲为止。</p>
+        </div>
+      </div>
+    </article>
+
+    <aside class="more">
+      <div class="narrow">
+        <p class="sec-index"><span lang="en">Continue</span></p>
+        <h2>继续读</h2>
+        <ul class="more-list">
+          <li><a href="settlement-to-yield.html"><time datetime="2026-09-28">2026.09.28</time><span class="more-name">从结算走到收益</span></a></li>
+          <li><a href="chengwu.html"><time datetime="2026-09-12">2026.09.12</time><span class="more-name">乘物以游心</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="article-end">
+      <div class="narrow">
+        <a class="cta" href="index.html">返回文章</a>
+        <a class="cue" href="../index.html">返回首页</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> 游心 · With Wandering Heart</p>
+      <p class="footer-motto" translate="no">乘物以游心</p>
+      <nav class="footer-nav" aria-label="页脚">
+        <a href="index.html">文章</a>
+        <a href="../index.html">首页</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../script.js?v=hq20261009a"></script>
+</body>
+</html>

@@ -10,7 +10,10 @@
 
   const restoreHash = () => {
     const id = decodeURIComponent(location.hash.replace(/^#/, ""));
-    if (!id) return;
+    if (!id || id === "home") {
+      if (id === "home") window.scrollTo(0, 0);
+      return;
+    }
     const target = document.getElementById(id);
     if (target) target.scrollIntoView({ block: "start" });
   };
@@ -58,51 +61,42 @@
     window.setTimeout(finishLoader, 1720);
   }
 
-  const links = Array.from(document.querySelectorAll("[data-nav]"));
-  const ids = ["home", "about", "experience", "projects", "excerpt", "notes"];
-  const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
-
-  const activate = (id) => {
-    const hash = `#${id}`;
-    links.forEach((link) => {
-      const on = link.getAttribute("href") === hash;
-      if (on) link.setAttribute("aria-current", "true");
-      else link.removeAttribute("aria-current");
-    });
-  };
-
-  if (sections.length && "IntersectionObserver" in window) {
-    const seenRatio = new Map();
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        seenRatio.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
-      });
-      const doc = document.documentElement;
-      if (window.scrollY + window.innerHeight >= doc.scrollHeight - 4) {
-        activate(sections[sections.length - 1].id);
-        return;
-      }
-      let best = sections[0].id;
-      let bestRatio = -1;
-      sections.forEach((section) => {
-        const ratio = seenRatio.get(section.id) || 0;
-        if (ratio > bestRatio) {
-          bestRatio = ratio;
-          best = section.id;
-        }
-      });
-      if (bestRatio > 0) activate(best);
-    }, { rootMargin: "-30% 0px -45% 0px", threshold: [0, 0.2, 0.45, 0.7, 1] });
-    sections.forEach((section) => observer.observe(section));
-  } else if (sections[0]) {
-    activate(sections[0].id);
-  }
-
   const onScroll = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 8);
   };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+
+  document.querySelectorAll('a[href="#home"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+  });
+
+  if (document.body.dataset.page === "home") {
+    const about = document.getElementById("about");
+    const homeLinks = Array.from(document.querySelectorAll('[data-nav="home"]'));
+    const aboutLinks = Array.from(document.querySelectorAll('[data-nav="about"]'));
+    const setAbout = (on) => {
+      aboutLinks.forEach((link) => {
+        if (on) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      });
+      homeLinks.forEach((link) => {
+        if (on) link.removeAttribute("aria-current");
+        else link.setAttribute("aria-current", "page");
+      });
+    };
+    if (about && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          setAbout(entry.isIntersecting && entry.intersectionRatio >= 0.35);
+        });
+      }, { threshold: [0.35, 0.6], rootMargin: "-15% 0px -35% 0px" });
+      observer.observe(about);
+    }
+  }
 
   const btn = document.getElementById("menuBtn");
   const nav = document.getElementById("mobileNav");
@@ -142,7 +136,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 860 && !nav.hidden) setOpen(false);
+      if (window.innerWidth > 760 && !nav.hidden) setOpen(false);
     });
   }
 

@@ -1,67 +1,42 @@
-# jay zhao 个人主页
+# 游心 · With Wandering Heart
 
-简单、克制的静态个人主页（中文界面）。本地打开 `index.html` 即可预览。
+jay zhao 的线上根据地。静态页面，中文为主。首页放立场和入口，长文放在文章目录里。
 
-## 文件
-
-| 文件 | 说明 |
-|------|------|
-| `index.html` | 页面结构与中文占位内容 |
-| `styles.css` | 柔和深色极简样式 |
-| `script.js` | 页脚年份与移动端导航 |
-
-板块：工作反思 · 个人成长 · 实践经验 · 随记（名称待定）
-
-## 本地预览
-
-用浏览器直接打开 `index.html`，或在本目录启动静态服务：
+本地预览：
 
 ```bash
-# Python
 python3 -m http.server 8080
-
-# 或 Node (需已安装 npx)
-npx --yes serve -p 8080
 ```
 
-然后访问 `http://localhost:8080`。
+打开 `http://localhost:8080`。
 
-## 发布到 GitHub Pages
+## 页面
 
-无需构建步骤。任选一种方式：
+| 路径 | 说明 |
+|------|------|
+| `index.html` | 首页。大标题、立场、最近三篇文章、短的关于 |
+| `writing/index.html` | 文章目录。标题、日期、摘录、阅读 |
+| `writing/*.html` | 单篇文章 |
+| `vanholtz.html` | 另一套视觉，链回首页 |
+| `styles.css` / `script.js` | 样式与导航。系统字体，无构建 |
 
-### 方式 A：仓库根目录即站点
+线上：
 
-1. 在 GitHub 新建仓库（例如 `personal-site`）。
-2. 将本目录内容推送到默认分支（`main`）：
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial personal homepage"
-   git branch -M main
-   git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-   git push -u origin main
-   ```
-3. 打开仓库 **Settings → Pages**。
-4. **Source** 选 **Deploy from a branch**，分支选 `main`，文件夹选 `/ (root)`，保存。
-5. 稍等一两分钟，站点地址一般为：  
-   `https://<你的用户名>.github.io/<仓库名>/`
+- 首页 <https://withwanderingheart.github.io/>
+- 文章 <https://withwanderingheart.github.io/writing/>
 
-### 方式 B：用户主站（`username.github.io`）
+GitHub Pages 从 `main` 根目录发布。仓库里有 `.nojekyll`。
 
-1. 新建名为 `<你的用户名>.github.io` 的仓库。
-2. 将本目录文件推送到该仓库的 `main` 分支。
-3. 在 **Settings → Pages** 启用从 `main` / root 部署。
-4. 站点地址：`https://<你的用户名>.github.io/`
+## 如何新增一篇文章
 
-### 自定义域名（可选）
+不需要 CMS。复制一篇旧文，改文字，再在两个列表里各加一行。
 
-在 Pages 设置里填入域名，并按 GitHub 文档配置 DNS（通常是 `CNAME` 或 `A` 记录）。仓库根目录可放置一个内容为你域名的 `CNAME` 文件。
+1. 复制 `writing/chengwu.html`（或任意一篇）为 `writing/你的文件名.html`。
+2. 修改这一篇里的 `title`、`description`、`canonical`、`og:*`、日期、`h1` 和正文。文末「继续读」改成其他文章的链接。
+3. 打开 `writing/index.html`，在 `ol.letter-list` **最上方**加一条（时间倒序）。一条里要有：`<time>`、标题链接、一两句摘录、`阅读` 链接。
+4. 打开根目录 `index.html` 的「文章」区块，同样保持**最新 3 条**。更早的只留在目录页。
+5. 只有改了 `styles.css` 或 `script.js` 时，才把各页的 `?v=` 换成新参数，避免浏览器继续用旧文件。
 
-## 修改内容
+`writing/index.html` 顶部的 HTML 注释里有同样的步骤。
 
-直接编辑 `index.html` 中各 `section` 的标题与段落即可。样式改 `styles.css`，导航交互改 `script.js`。
-
-## 许可
-
-个人使用；内容请自行替换为真实文字后再公开发布。
+单篇文章用相对路径：样式是 `../styles.css`，首页是 `../index.html`，目录是 `index.html`。

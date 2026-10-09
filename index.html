@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="游心 · With Wandering Heart。乘物以游心。jay zhao 的个人主页：FDE / AI 落地、交易银行业务笔记与成长记录。" />
+  <meta name="description" content="游心 · With Wandering Heart。jay zhao 的线上根据地：乘物以游心。写作、交易银行学习笔记，以及把 AI 放进真实流程。" />
   <meta name="author" content="jay zhao" />
   <meta name="theme-color" content="#090b0e" />
   <meta property="og:title" content="游心 · With Wandering Heart" />
@@ -14,7 +14,7 @@
   <title>游心 · With Wandering Heart</title>
   <link rel="canonical" href="https://withwanderingheart.github.io/" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 96'%3E%3Cpolygon points='39 0 0 22 0 67 39 90 78 68 78 23' fill='%23090b0e' stroke='%2364ffda' stroke-width='6'/%3E%3Ctext x='39' y='58' text-anchor='middle' font-size='34' font-family='ui-monospace,monospace' font-weight='700' fill='%237dd3fc'%3EY%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="styles.css?v=ed20261008b" />
+  <link rel="stylesheet" href="styles.css?v=hq20261009a" />
   <script>
     document.documentElement.classList.add("js");
     try {
@@ -23,8 +23,9 @@
       }
     } catch (err) {}
   </script>
+  <noscript><style>.reveal,.hero-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
-<body>
+<body data-page="home">
 
   <a class="skip" href="#home">跳到内容</a>
 
@@ -73,13 +74,10 @@
         <span class="brand-name" translate="no">游心</span>
       </a>
 
-      <nav class="site-nav" aria-label="页面章节">
-        <a href="#home" data-nav>首页</a>
-        <a href="#about" data-nav>关于</a>
-        <a href="#experience" data-nav>经历</a>
-        <a href="#projects" data-nav>项目</a>
-        <a href="#excerpt" data-nav>摘录</a>
-        <a href="#notes" data-nav>随记</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#home" data-nav="home" aria-current="page">首页</a>
+        <a href="writing/index.html" data-nav="writing">文章</a>
+        <a href="#about" data-nav="about">关于</a>
       </nav>
 
       <a class="header-alt" href="vanholtz.html">另一版</a>
@@ -91,176 +89,126 @@
   </header>
 
   <nav class="mobile-nav" id="mobileNav" hidden aria-label="菜单">
-    <a href="#home" data-nav>首页</a>
-    <a href="#about" data-nav>关于</a>
-    <a href="#experience" data-nav>经历</a>
-    <a href="#projects" data-nav>项目</a>
-    <a href="#excerpt" data-nav>摘录</a>
-    <a href="#notes" data-nav>随记</a>
-    <a class="mobile-alt" href="vanholtz.html">Van Holtz 版</a>
+    <a href="#home" data-nav="home" aria-current="page">首页</a>
+    <a href="writing/index.html" data-nav="writing">文章</a>
+    <a href="#about" data-nav="about">关于</a>
+    <a class="mobile-alt" href="vanholtz.html">另一版视觉</a>
   </nav>
 
-  <main>
-    <section id="home" class="hero" aria-labelledby="hero-title">
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
         <p class="eyebrow hero-reveal d1"><span lang="en">jay zhao</span> · <span lang="en">With Wandering Heart</span></p>
         <h1 id="hero-title" class="hero-title hero-reveal d2">
-          <span class="sr-only">游心。</span>
           <span class="motto" translate="no">乘物以游心</span>
         </h1>
         <span class="grad-rule hero-reveal d3" aria-hidden="true"></span>
-        <p class="hero-en hero-reveal d3" lang="en">Ride along with things. Let the mind wander.</p>
-        <div class="hero-lower hero-reveal d4">
-          <div class="hero-copy">
-            <p class="dek">随事而行，心有余地。记录工作反思、AI 落地，与个人成长。</p>
-            <a class="cue" href="#about">关于 <span aria-hidden="true">↓</span></a>
-          </div>
-          <ul class="meta">
-            <li>FDE</li>
-            <li>AI 落地</li>
-            <li>交易银行</li>
-            <li>自媒体</li>
-            <li>成长笔记</li>
-          </ul>
+        <p class="hero-en hero-reveal d3" lang="en">Ride along with things. Leave the mind room.</p>
+        <p class="dek hero-reveal d4">这是我的线上根据地。先写清自己站在哪里，再把学到的东西留成可以重读的文章。</p>
+        <div class="hero-actions hero-reveal d4">
+          <a class="cta" href="writing/index.html">阅读文章 <span aria-hidden="true">→</span></a>
+          <a class="cue" href="#about">关于</a>
         </div>
+        <ul class="meta hero-reveal d4">
+          <li>写作</li>
+          <li>交易银行笔记</li>
+          <li>FDE / AI 落地</li>
+        </ul>
       </div>
     </section>
 
-    <section id="about" class="section reveal" aria-labelledby="about-title">
-      <div class="wrap">
-        <div class="split">
-          <header class="sec-head">
-            <p class="sec-index"><span>01</span> <span lang="en">About</span></p>
-            <h2 id="about-title">关于</h2>
-          </header>
-          <div>
-            <p class="lede">偏好把复杂的事情写清楚，把节奏留在可控范围内。</p>
-            <div class="prose">
-              <p>我是 <strong>jay zhao</strong>。写字、做这页站点时，用「游心 · With Wandering Heart」。</p>
-              <p>近两年在银行做交易银行（<span lang="en">transaction banking</span>）相关的业务，日常碰到的是结算、资金和收入结构。口述时很绕，写下来才站得住。</p>
-              <p>现在的方向是 <span lang="en">FDE</span>（<span lang="en">forward deployed engineer</span>）：少停在演示，把 AI 放进真实流程里。旁边是自媒体，和只给自己看的成长笔记。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section reveal" aria-labelledby="experience-title">
+    <section class="section reveal" aria-labelledby="stance-title">
       <div class="wrap">
         <header class="sec-head">
-          <p class="sec-index"><span>02</span> <span lang="en">Experience</span></p>
-          <h2 id="experience-title">经历</h2>
+          <p class="sec-index"><span>01</span> <span lang="en">Stance</span></p>
+          <h2 id="stance-title">我站在这里</h2>
         </header>
-        <p class="lede">履历不长。近两年在交易银行业务里，更多是在学怎么把一件事看清楚。</p>
-        <ol class="principles">
+        <p class="lede">三句话。后面的文章都从这里长出来。</p>
+        <ol class="stance">
           <li>
-            <h3>少做「看起来忙」的事</h3>
-            <p>每周留一段安静时间，复盘哪些投入真正改变了进度。</p>
+            <span class="num">01</span>
+            <h3>随事而行</h3>
+            <p>先看清约束：口径、读者、上线的窗口。心要搭这艘船，不是跟它吵架。</p>
           </li>
           <li>
-            <h3>把反馈当成原材料</h3>
-            <p>先记下原话，再区分事实与情绪，挑一两处落地。</p>
+            <span class="num">02</span>
+            <h3>写到能复述</h3>
+            <p>口述会绕的事，写成一条别人（包括下周的自己）能重讲的链。</p>
           </li>
           <li>
-            <h3>节奏比冲刺更重要</h3>
-            <p>固定周记与月度回顾，一次只改卡住的一两件事。</p>
+            <span class="num">03</span>
+            <h3>放进真实流程</h3>
+            <p>AI 的价值在现场。少停在演示，一次只嵌进一个能看见差别的环节。</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section id="projects" class="section reveal" aria-labelledby="projects-title">
+    <section class="section reveal" aria-labelledby="writing-title">
       <div class="wrap">
-        <header class="sec-head">
-          <p class="sec-index"><span>03</span> <span lang="en">Projects</span></p>
-          <h2 id="projects-title">项目</h2>
-        </header>
-        <p class="lede">目前公开的，是这页站点，和还在整理的业务笔记。</p>
-        <ul class="cards">
-          <li>
-            <a class="card" href="https://withwanderingheart.github.io/">
-              <span class="card-kicker">01</span>
-              <span class="card-title">Personal Site · 游心</span>
-              <span class="card-desc">这份主页。工作反思、成长与实践的记录。</span>
-              <span class="card-meta"><span>HTML</span><span>CSS</span><span>Pages</span></span>
-              <span class="card-go">查看 <span aria-hidden="true">→</span></span>
-            </a>
+        <div class="sec-row">
+          <header class="sec-head">
+            <p class="sec-index"><span>02</span> <span lang="en">Writing</span></p>
+            <h2 id="writing-title">文章</h2>
+          </header>
+          <a class="cue" href="writing/index.html">全部文章 <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="lede">长文按时间倒序。现在三篇，新的会放在最上面。</p>
+        <ol class="letter-list">
+          <li class="letter">
+            <time datetime="2026-10-08">2026.10.08</time>
+            <div>
+              <h3><a class="letter-title" href="writing/fde.html">把 AI 放进真实流程</a></h3>
+              <p>一则兴趣笔记：少停在演示。先看输入从哪来、谁对结果负责、错了怎么退回。</p>
+            </div>
+            <a class="read" href="writing/fde.html">阅读<span class="sr-only">：把 AI 放进真实流程</span> <span aria-hidden="true">→</span></a>
           </li>
-          <li>
-            <a class="card" href="vanholtz.html">
-              <span class="card-kicker">02</span>
-              <span class="card-title">Personal Site · Van Holtz</span>
-              <span class="card-desc">同一内容的另一套视觉：深蓝底、大字号、项目优先。</span>
-              <span class="card-meta"><span>Design</span><span>Static</span></span>
-              <span class="card-go">打开 <span aria-hidden="true">→</span></span>
-            </a>
+          <li class="letter">
+            <time datetime="2026-09-28">2026.09.28</time>
+            <div>
+              <h3><a class="letter-title" href="writing/settlement-to-yield.html">从结算走到收益</a></h3>
+              <p>交易银行学习笔记。把结算、活期和收益收成一条能复述的链，不写机构和数字。</p>
+            </div>
+            <a class="read" href="writing/settlement-to-yield.html">阅读<span class="sr-only">：从结算走到收益</span> <span aria-hidden="true">→</span></a>
           </li>
-          <li>
-            <article class="card card-static">
-              <span class="card-kicker">03</span>
-              <h3 class="card-title">TB 业务笔记整理</h3>
-              <p class="card-desc">把结算、资金池与收入结构口述整理成可复用的 Obsidian 笔记。</p>
-              <span class="card-meta"><span>Notes</span><span>Finance</span></span>
-              <span class="card-go">笔记 · 未公开</span>
-            </article>
+          <li class="letter">
+            <time datetime="2026-09-12">2026.09.12</time>
+            <div>
+              <h3><a class="letter-title" href="writing/chengwu.html">乘物以游心</a></h3>
+              <p>这页站点为什么叫游心。随事而行，心有余地。</p>
+            </div>
+            <a class="read" href="writing/chengwu.html">阅读<span class="sr-only">：乘物以游心</span> <span aria-hidden="true">→</span></a>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
-    <section id="excerpt" class="section band reveal" aria-labelledby="excerpt-title">
-      <div class="wrap excerpt-inner">
+    <section id="about" class="section reveal" aria-labelledby="about-title">
+      <div class="wrap about-grid">
         <header class="sec-head">
-          <p class="sec-index"><span>04</span> <span lang="en">Excerpt</span></p>
-          <h2 id="excerpt-title">摘录</h2>
+          <p class="sec-index"><span>03</span> <span lang="en">About</span></p>
+          <h2 id="about-title">关于</h2>
         </header>
+        <div class="about-copy">
+          <p class="lede">我是 jay zhao。写字、做这页站点时，用「游心 · With Wandering Heart」。</p>
+          <p>近两年在交易银行相关的业务里学习结算、资金和收入结构。口述很容易绕，所以把能公开的部分收成笔记。</p>
+          <p>现在的方向是 <span lang="en">FDE</span>（<span lang="en">forward deployed engineer</span>）：少停在演示，把 AI 放进真实流程。旁边还有自媒体，和只给自己看的成长笔记。</p>
+          <p>公开的长文在<a href="writing/index.html">文章</a>。同一批意思的另一套视觉在<a href="vanholtz.html">这里</a>。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band reveal" aria-label="摘录">
+      <div class="wrap">
+        <p class="sec-index"><span lang="en">Excerpt</span></p>
         <blockquote>
           <p translate="no">乘物以游心。</p>
         </blockquote>
         <p class="cite-row">
           <cite>《庄子 · 人间世》</cite>
-          <span lang="en">Zhuangzi</span>
         </p>
         <p class="gloss">随事而行，而不被事拖着走。</p>
-      </div>
-    </section>
-
-    <section id="notes" class="section reveal" aria-labelledby="notes-title">
-      <div class="wrap">
-        <header class="sec-head">
-          <p class="sec-index"><span>05</span> <span lang="en">Notes</span></p>
-          <h2 id="notes-title">随记</h2>
-        </header>
-        <p class="lede">公开写作还没开始。先把目录放在这里，免得方向散掉。</p>
-        <ol class="index">
-          <li>
-            <h3>工作反思</h3>
-            <p>哪些投入真正改变了进度。</p>
-          </li>
-          <li>
-            <h3>个人成长</h3>
-            <p>反馈、节奏，一次只改卡住的一两件事。</p>
-          </li>
-          <li>
-            <h3>金融业务</h3>
-            <p>结算、资金池与收入结构。</p>
-          </li>
-          <li>
-            <h3>AI 落地</h3>
-            <p>把模型放进真实流程，而不是停在演示。</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section close reveal" aria-labelledby="close-title">
-      <div class="wrap close-grid">
-        <div>
-          <p class="sec-index"><span lang="en">Also</span></p>
-          <h2 id="close-title">同一内容，另一套视觉。</h2>
-          <p class="close-copy">Van Holtz 版用更深的蓝、更大的字。文字相同，节奏不同。</p>
-        </div>
-        <a class="cta" href="vanholtz.html">打开 Van Holtz 版 <span aria-hidden="true">→</span></a>
+        <a class="cue" href="writing/chengwu.html">阅读这篇 <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
@@ -269,10 +217,13 @@
     <div class="wrap footer-inner">
       <p>© <span id="year"></span> 游心 · With Wandering Heart</p>
       <p class="footer-motto" translate="no">乘物以游心</p>
-      <a href="vanholtz.html">另一版视觉</a>
+      <nav class="footer-nav" aria-label="页脚">
+        <a href="writing/index.html">文章</a>
+        <a href="vanholtz.html">另一版</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="script.js?v=ed20261008b"></script>
+  <script src="script.js?v=hq20261009a"></script>
 </body>
 </html>
