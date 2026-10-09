@@ -74,30 +74,6 @@
     });
   });
 
-  if (document.body.dataset.page === "home") {
-    const about = document.getElementById("about");
-    const homeLinks = Array.from(document.querySelectorAll('[data-nav="home"]'));
-    const aboutLinks = Array.from(document.querySelectorAll('[data-nav="about"]'));
-    const setAbout = (on) => {
-      aboutLinks.forEach((link) => {
-        if (on) link.setAttribute("aria-current", "true");
-        else link.removeAttribute("aria-current");
-      });
-      homeLinks.forEach((link) => {
-        if (on) link.removeAttribute("aria-current");
-        else link.setAttribute("aria-current", "page");
-      });
-    };
-    if (about && "IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          setAbout(entry.isIntersecting && entry.intersectionRatio >= 0.35);
-        });
-      }, { threshold: [0.35, 0.6], rootMargin: "-15% 0px -35% 0px" });
-      observer.observe(about);
-    }
-  }
-
   const btn = document.getElementById("menuBtn");
   const nav = document.getElementById("mobileNav");
   const main = document.querySelector("main");
@@ -136,7 +112,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 760 && !nav.hidden) setOpen(false);
+      if (window.innerWidth > 920 && !nav.hidden) setOpen(false);
     });
   }
 

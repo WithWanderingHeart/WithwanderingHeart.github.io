@@ -1,6 +1,6 @@
-# 游心 · With Wandering Heart
+# 精进
 
-jay zhao 的线上根据地。静态页面，中文为主。首页放立场和入口，长文放在文章目录里。
+jay zhao 的写作页。静态页面，中文为主。首页是题目和两条线的入口，文章按栏目分组。
 
 本地预览：
 
@@ -14,29 +14,28 @@ python3 -m http.server 8080
 
 | 路径 | 说明 |
 |------|------|
-| `index.html` | 首页。大标题、立场、最近三篇文章、短的关于 |
-| `writing/index.html` | 文章目录。标题、日期、摘录、阅读 |
-| `writing/*.html` | 单篇文章 |
+| `index.html` | 首页。题目「精进」，认知差 / 信息差入口，最近文章 |
+| `writing/index.html` | 文章目录。两个标题下四个栏目 |
+| `writing/cognition/` | 认知差。思辨、知行 |
+| `writing/info/` | 信息差。大浪淘金、日有所进 |
 | `vanholtz.html` | 另一套视觉，链回首页 |
 | `styles.css` / `script.js` | 样式与导航。系统字体，无构建 |
 
-线上：
+线上从 `main` 根目录发布，仓库里有 `.nojekyll`。
 
 - 首页 <https://withwanderingheart.github.io/>
 - 文章 <https://withwanderingheart.github.io/writing/>
-
-GitHub Pages 从 `main` 根目录发布。仓库里有 `.nojekyll`。
+- 认知差 <https://withwanderingheart.github.io/writing/cognition/>
+- 信息差 <https://withwanderingheart.github.io/writing/info/>
 
 ## 如何新增一篇文章
 
-不需要 CMS。复制一篇旧文，改文字，再在两个列表里各加一行。
-
-1. 复制 `writing/chengwu.html`（或任意一篇）为 `writing/你的文件名.html`。
-2. 修改这一篇里的 `title`、`description`、`canonical`、`og:*`、日期、`h1` 和正文。文末「继续读」改成其他文章的链接。
-3. 打开 `writing/index.html`，在 `ol.letter-list` **最上方**加一条（时间倒序）。一条里要有：`<time>`、标题链接、一两句摘录、`阅读` 链接。
-4. 打开根目录 `index.html` 的「文章」区块，同样保持**最新 3 条**。更早的只留在目录页。
-5. 只有改了 `styles.css` 或 `script.js` 时，才把各页的 `?v=` 换成新参数，避免浏览器继续用旧文件。
+1. 复制同栏目里的一篇到对应目录：思辨、知行在 `writing/cognition/`，大浪淘金、日有所进在 `writing/info/`。
+2. 改 `title`、`description`、`canonical`、日期、标题和正文。文末「继续读」换成同栏目其他篇。
+3. 在栏目页（`sibian.html` / `zhixing.html` / `dalang.html` / `riyou.html`）列表最上方加一条。
+4. 在 `writing/index.html` 对应分组最上方加一条。根目录 `index.html` 的「最近」保留最新几条。
+5. 只有改了 `styles.css` 或 `script.js` 时，才把各页的 `?v=` 换成新参数。
 
 `writing/index.html` 顶部的 HTML 注释里有同样的步骤。
 
-单篇文章用相对路径：样式是 `../styles.css`，首页是 `../index.html`，目录是 `index.html`。
+旧地址 `writing/chengwu.html`、`writing/fde.html`、`writing/settlement-to-yield.html` 会转到新路径。

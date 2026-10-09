@@ -3,31 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="游心的文章。长文目录：乘物以游心、从结算走到收益、把 AI 放进真实流程。" />
+  <meta name="description" content="精进的文章。按认知差（思辨、知行）和信息差（大浪淘金、日有所进）分组。" />
   <meta name="author" content="jay zhao" />
   <meta name="theme-color" content="#090b0e" />
-  <meta property="og:title" content="文章 · 游心" />
-  <meta property="og:description" content="长文按时间倒序。立场、交易银行学习，以及 AI 落地。" />
+  <meta property="og:title" content="文章 · 精进" />
+  <meta property="og:description" content="认知差：思辨与知行。信息差：大浪淘金与日有所进。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://withwanderingheart.github.io/writing/" />
-  <title>文章 · 游心</title>
+  <title>文章 · 精进</title>
   <link rel="canonical" href="https://withwanderingheart.github.io/writing/" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 96'%3E%3Cpolygon points='39 0 0 22 0 67 39 90 78 68 78 23' fill='%23090b0e' stroke='%2364ffda' stroke-width='6'/%3E%3Ctext x='39' y='58' text-anchor='middle' font-size='34' font-family='ui-monospace,monospace' font-weight='700' fill='%237dd3fc'%3EY%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="../styles.css?v=hq20261009a" />
+  <link rel="stylesheet" href="../styles.css?v=jj20261009b" />
   <script>document.documentElement.classList.add("js");</script>
   <noscript><style>.reveal,.hero-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <!--
   如何新增一篇文章
-  1. 复制本目录任意一篇（例如 chengwu.html），改成新文件名。
-  2. 改 title、description、canonical、日期、标题和正文。文末「继续读」换成其他篇。
-  3. 在下面的 ol.letter-list 最上方加一条（时间倒序）：日期、标题、一段摘录、阅读链接。
-  4. 打开站点根目录 index.html，把「文章」列表保持为最新 3 条。
-  样式与脚本在上一级：../styles.css 、../script.js。改了它们才需要把 ?v= 换成新的参数。
+  1. 复制同栏目里的一篇，放到对应目录：
+     思辨、知行 → writing/cognition/
+     大浪淘金、日有所进 → writing/info/
+  2. 改 title、description、canonical、日期、标题和正文。文末「继续读」换成同栏目其他篇。
+  3. 在栏目页（sibian.html / zhixing.html / dalang.html / riyou.html）的列表最上方加一条。
+  4. 在本页对应分组最上方加一条，并在站点根目录 index.html 的「最近」里保留最新几条。
+  样式与脚本在上一级：../styles.css 、../script.js。改了它们才把 ?v= 换成新参数。
 -->
-<body data-page="writing">
+<body>
 
-  <a class="skip" href="#list">跳到文章</a>
+  <a class="skip" href="#cognition">跳到目录</a>
 
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
@@ -51,13 +53,13 @@
             </svg>
           </span>
         </span>
-        <span class="brand-name" translate="no">游心</span>
+        <span class="brand-name" translate="no">精进</span>
       </a>
 
       <nav class="site-nav" aria-label="主导航">
-        <a href="../index.html" data-nav="home">首页</a>
-        <a href="index.html" data-nav="writing" aria-current="page">文章</a>
-        <a href="../index.html#about" data-nav="about">关于</a>
+        <a href="../index.html">首页</a>
+        <a href="cognition/index.html">认知差</a>
+        <a href="info/index.html">信息差</a>
       </nav>
 
       <a class="header-alt" href="../vanholtz.html">另一版</a>
@@ -69,48 +71,97 @@
   </header>
 
   <nav class="mobile-nav" id="mobileNav" hidden aria-label="菜单">
-    <a href="../index.html" data-nav="home">首页</a>
-    <a href="index.html" data-nav="writing" aria-current="page">文章</a>
-    <a href="../index.html#about" data-nav="about">关于</a>
-    <a class="mobile-alt" href="../vanholtz.html">另一版视觉</a>
+    <a href="../index.html">首页</a>
+    <a href="cognition/index.html">认知差</a>
+    <a href="info/index.html">信息差</a>
+    <a href="index.html" aria-current="page">文章</a>
+    <a class="mobile-alt" href="../vanholtz.html">另一版</a>
   </nav>
 
   <main>
     <header class="page-hero">
       <div class="wrap">
-        <p class="eyebrow"><span lang="en">Writing</span></p>
-        <h1 class="page-title">文章</h1>
-        <p class="lede">长文按时间倒序放在这里。标题、日期、一段摘录，然后是正文。</p>
-        <p class="dek-en" lang="en">Notes on attention, transaction banking, and putting AI into real work.</p>
+        <p class="eyebrow">文章</p>
+        <h1 class="page-title">按两条线读</h1>
+        <p class="lede">认知差是自己的判断。信息差是留下来的外部信息。四个栏目分开，回看时不用再分类。</p>
       </div>
     </header>
 
-    <section id="list" class="section flush" aria-label="文章目录">
+    <section id="cognition" class="section flush" aria-labelledby="cognition-title">
       <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-index"><span>01</span></p>
+          <h2 id="cognition-title"><a href="cognition/index.html">认知差</a></h2>
+        </header>
+        <p class="lede">看清自己怎么想，再写到能做。</p>
+
+        <h3 class="group-label" id="sibian"><a href="cognition/sibian.html">思辨</a></h3>
+        <p class="group-dek">看法。一句还缠着的话，写成能重读的句子。</p>
+        <ol class="letter-list">
+          <li class="letter">
+            <time datetime="2026-09-12">2026.09.12</time>
+            <div>
+              <h2><a class="letter-title" href="cognition/chengwu.html">乘物以游心</a></h2>
+              <p>旧文。随事而行，心有余地。不再当作整站标题。</p>
+            </div>
+            <a class="read" href="cognition/chengwu.html">阅读<span class="sr-only">：乘物以游心</span> <span aria-hidden="true">→</span></a>
+          </li>
+        </ol>
+
+        <h3 class="group-label" id="zhixing"><a href="cognition/zhixing.html">知行</a></h3>
+        <p class="group-dek">做法。学到的事，收成能复述、能对着真实流程用的链。</p>
         <ol class="letter-list">
           <li class="letter">
             <time datetime="2026-10-08">2026.10.08</time>
             <div>
-              <h2><a class="letter-title" href="fde.html">把 AI 放进真实流程</a></h2>
-              <p>一则兴趣笔记：少停在演示。先看输入从哪来、谁对结果负责、错了怎么退回。</p>
+              <h2><a class="letter-title" href="cognition/fde.html">把 AI 放进真实流程</a></h2>
+              <p>少停在演示。先看输入从哪来、谁对结果负责、错了怎么退回。</p>
             </div>
-            <a class="read" href="fde.html">阅读<span class="sr-only">：把 AI 放进真实流程</span> <span aria-hidden="true">→</span></a>
+            <a class="read" href="cognition/fde.html">阅读<span class="sr-only">：把 AI 放进真实流程</span> <span aria-hidden="true">→</span></a>
           </li>
           <li class="letter">
             <time datetime="2026-09-28">2026.09.28</time>
             <div>
-              <h2><a class="letter-title" href="settlement-to-yield.html">从结算走到收益</a></h2>
-              <p>交易银行学习笔记。把结算、活期和收益收成一条能复述的链，不写机构和数字。</p>
+              <h2><a class="letter-title" href="cognition/settlement-to-yield.html">从结算走到收益</a></h2>
+              <p>交易银行学习笔记。结算是动作，活期是停留，收益是计价。</p>
             </div>
-            <a class="read" href="settlement-to-yield.html">阅读<span class="sr-only">：从结算走到收益</span> <span aria-hidden="true">→</span></a>
+            <a class="read" href="cognition/settlement-to-yield.html">阅读<span class="sr-only">：从结算走到收益</span> <span aria-hidden="true">→</span></a>
           </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="info" class="section" aria-labelledby="info-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-index"><span>02</span></p>
+          <h2 id="info-title"><a href="info/index.html">信息差</a></h2>
+        </header>
+        <p class="lede">少留。留下的要能说明为什么值得再打开。</p>
+
+        <h3 class="group-label" id="dalang"><a href="info/dalang.html">大浪淘金</a></h3>
+        <p class="group-dek">从噪音里留一条信号，并写明这次先不追什么。</p>
+        <ol class="letter-list">
           <li class="letter">
-            <time datetime="2026-09-12">2026.09.12</time>
+            <time datetime="2026-10-09">2026.10.09</time>
             <div>
-              <h2><a class="letter-title" href="chengwu.html">乘物以游心</a></h2>
-              <p>这页站点为什么叫游心。随事而行，心有余地。</p>
+              <h2><a class="letter-title" href="info/one-signal.html">信号先单独放一行</a></h2>
+              <p>开篇。一条信号、它改变的判断、这次先放下的噪音。</p>
             </div>
-            <a class="read" href="chengwu.html">阅读<span class="sr-only">：乘物以游心</span> <span aria-hidden="true">→</span></a>
+            <a class="read" href="info/one-signal.html">阅读<span class="sr-only">：信号先单独放一行</span> <span aria-hidden="true">→</span></a>
+          </li>
+        </ol>
+
+        <h3 class="group-label" id="riyou"><a href="info/riyou.html">日有所进</a></h3>
+        <p class="group-dek">一天一条：它是什么，为什么留下，用在哪。</p>
+        <ol class="letter-list">
+          <li class="letter">
+            <time datetime="2026-10-09">2026.10.09</time>
+            <div>
+              <h2><a class="letter-title" href="info/daily-2026-10-09.html">三步不要揉成一个词</a></h2>
+              <p>今天留下的用法：听到一笔业务，先分开问动作、停留、计价。</p>
+            </div>
+            <a class="read" href="info/daily-2026-10-09.html">阅读<span class="sr-only">：三步不要揉成一个词</span> <span aria-hidden="true">→</span></a>
           </li>
         </ol>
       </div>
@@ -119,15 +170,16 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>© <span id="year"></span> 游心 · With Wandering Heart</p>
-      <p class="footer-motto" translate="no">乘物以游心</p>
+      <p>© <span id="year"></span> jay zhao · 精进</p>
       <nav class="footer-nav" aria-label="页脚">
         <a href="../index.html">首页</a>
+        <a href="cognition/index.html">认知差</a>
+        <a href="info/index.html">信息差</a>
         <a href="../vanholtz.html">另一版</a>
       </nav>
     </div>
   </footer>
 
-  <script src="../script.js?v=hq20261009a"></script>
+  <script src="../script.js?v=jj20261009b"></script>
 </body>
 </html>

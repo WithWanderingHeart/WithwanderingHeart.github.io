@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="从结算走到收益。一则交易银行学习笔记：结算是动作，活期是停留，收益是计价结构。" />
+  <meta name="author" content="jay zhao" />
+  <meta name="theme-color" content="#090b0e" />
+  <meta property="og:title" content="从结算走到收益 · 精进" />
+  <meta property="og:description" content="把结算、活期和收益收成一条能复述的链。个人学习笔记，没有机构和数字。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://withwanderingheart.github.io/writing/cognition/settlement-to-yield.html" />
+  <title>从结算走到收益 · 精进</title>
+  <link rel="canonical" href="https://withwanderingheart.github.io/writing/cognition/settlement-to-yield.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 96'%3E%3Cpolygon points='39 0 0 22 0 67 39 90 78 68 78 23' fill='%23090b0e' stroke='%2364ffda' stroke-width='6'/%3E%3Ctext x='39' y='58' text-anchor='middle' font-size='34' font-family='ui-monospace,monospace' font-weight='700' fill='%237dd3fc'%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../../styles.css?v=jj20261009b" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="article">
+
+  <a class="skip" href="#article">跳到正文</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../index.html">
+        <span class="hex-logo" aria-hidden="true">
+          <span class="hex-container">
+            <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg"><polygon stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23" fill="currentColor"/></svg>
+          </span>
+          <span class="logo-container">
+            <svg viewBox="0 0 84 96" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#64ffda"/>
+                  <stop offset="35%" stop-color="#7dd3fc"/>
+                  <stop offset="65%" stop-color="#c084fc"/>
+                  <stop offset="100%" stop-color="#fb7185"/>
+                </linearGradient>
+              </defs>
+              <polygon fill="var(--bg)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="39 0 0 22 0 67 39 90 78 68 78 23"/>
+              <text class="hex-letter" x="39" y="58" text-anchor="middle" fill="url(#hexGrad)" font-size="34" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-weight="700" letter-spacing="-0.04em">Y</text>
+            </svg>
+          </span>
+        </span>
+        <span class="brand-name" translate="no">精进</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="../../index.html">首页</a>
+        <a href="index.html" aria-current="page">认知差</a>
+        <a href="../info/index.html">信息差</a>
+      </nav>
+      <a class="header-alt" href="../../vanholtz.html">另一版</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="打开菜单">
+        <span class="menu-lines" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" hidden aria-label="菜单">
+    <a href="../../index.html">首页</a>
+    <a href="index.html" aria-current="page">认知差</a>
+    <a href="../info/index.html">信息差</a>
+    <a href="../index.html">文章</a>
+    <a class="mobile-alt" href="../../vanholtz.html">另一版视觉</a>
+  </nav>
+
+  <main id="article">
+    <article>
+      <header class="article-hero">
+        <div class="narrow">
+          <p class="crumb"><a href="../index.html">文章</a> <span aria-hidden="true">/</span> <a href="index.html">认知差</a> <span aria-hidden="true">/</span> <a href="zhixing.html">知行</a></p>
+          <time datetime="2026-09-28">2026.09.28</time>
+          <h1>从结算走到收益</h1>
+          <p class="dek">一则交易银行学习笔记：钱在流动，也在停留。归在知行。</p>
+        </div>
+      </header>
+      <div class="article-body">
+        <div class="narrow prose">
+          <aside class="note">
+            <p>这篇是我自己的学习笔记。近两年我在交易银行相关的业务里学结算、资金和收入结构。这里只保留一条能公开复述的链，不写机构、客户、产品参数，也没有业绩数字。</p>
+          </aside>
+
+          <p>刚接触的时候，我把交易银行理解成一根管子：款付出去，款收回来，事情就结束了。口述时很绕，是因为管子只解释了动作，没有解释钱停下的那一段，更没有解释这段停留在账上怎么被计价。</p>
+          <p>后来我把自己的理解收成三步，方便重讲：</p>
+          <ol>
+            <li><strong>结算</strong>是钱的动作。</li>
+            <li><strong>活期</strong>是钱的停留。</li>
+            <li><strong>收益</strong>是这件事被拆开以后的计价。</li>
+          </ol>
+          <p>顺序不能倒。先谈收益，句子会飘；先只谈结算，收入结构会对不上。</p>
+
+          <h2>结算：看得见的动作</h2>
+          <p>结算是谁付给谁、什么时候到账、过后怎么对上。付款指令、入账、对账，都在这一层。它是业务里最容易被讲出来的部分，因为每一步都有单据或状态。</p>
+          <p>如果学习停在这里，交易银行看起来就像运营：把一笔款安全、准时、可核对地送过去。这层必须先站稳。但它还不是收入结构。</p>
+
+          <h2>活期：动作之间的停留</h2>
+          <p>钱很少在「付」和「收」之间瞬间消失。它会在某个账户里停一会儿。今天到账、明天才付出；备付多留一天；一组账户之间余额此消彼长。这段停留，就是我现在说的活期。</p>
+          <p>我用「活期」指这种停得住、又随时可能再动的资金，不是某一份产品说明书。对使用资金的一方，它常常是尚未支付的营运资金。对机构，它常常落在负债端，表现为活期存款或至少是看得见的资金沉淀。两边用的可以是同一个余额，说的不是同一件事。</p>
+          <p>我以前把结算理解成流量。后来才把余额当成同一件事的另一面：流量决定钱怎么走，余额决定钱此刻在谁手里、大概停多久。</p>
+
+          <h2>收益：拆开，再谈数字</h2>
+          <p>和这条链有关的收益，我现在至少分成三层。它们可以同时存在，但不能揉成一个数。</p>
+          <ol>
+            <li><strong>结算服务本身的收费。</strong>按笔、按金额，或包含在一套方案里。这层跟着动作走。</li>
+            <li><strong>资金停留带来的利息差。</strong>负债有成本，资金被运用有回报，中间的差不是手续费。这层跟着停留走。</li>
+            <li><strong>因为账户和资金关系带出来的其他服务。</strong>现金管理、流动性安排一类。这层我还在学，不写成已经掌握的清单。</li>
+          </ol>
+          <p>三层分开之后，很多听起来矛盾的话就不再矛盾。手续费可以下降，沉淀可以上升，合在一起的「收入」可以看起来没变。不拆开，就不知道自己正在学哪一门。</p>
+
+          <h2>三个容易混的地方</h2>
+          <ul>
+            <li><strong>过账金额大，不等于收入大。</strong>流量看的是走过去多少，收益看的是费率、沉淀和定价。</li>
+            <li><strong>客户眼里的营运资金，和机构眼里的负债，不是同一个「好」。</strong>同一笔余额，一边是还没花出去的钱，一边是要付成本的资金来源。</li>
+            <li><strong>一个总收入数字会掩盖结构。</strong>合并口径适合汇报结果，不适合用来学习。学习时要能指着某一层说：变的是这里。</li>
+          </ul>
+
+          <h2>听到一笔业务，先问三句</h2>
+          <ol>
+            <li>钱的动作是什么：谁付给谁，什么时候到账？</li>
+            <li>钱会在哪里停，大概停多久？</li>
+            <li>这件事的收益记在手续费、利差，还是别的地方？</li>
+          </ol>
+          <p>三句都答上来，这条链就闭合了。答不上来的那一句，就是我还没看清的地方。</p>
+          <p>更细的产品参数和内部口径，留在不公开的笔记里。公开页只到「能复述」为止。思辨里的<a href="chengwu.html">乘物以游心</a>讲看法；这一篇是同一标准用在业务上：先看清动作、停留和计价，再决定自己停在哪一层。</p>
+        </div>
+      </div>
+    </article>
+
+    <aside class="more">
+      <div class="narrow">
+        <p class="sec-index"><span lang="en">Continue</span></p>
+        <h2>继续读</h2>
+        <ul class="more-list">
+          <li><a href="fde.html"><time datetime="2026-10-08">2026.10.08</time><span class="more-name">把 AI 放进真实流程</span></a></li>
+          <li><a href="chengwu.html"><time datetime="2026-09-12">2026.09.12</time><span class="more-name">乘物以游心</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="article-end">
+      <div class="narrow">
+        <a class="cta" href="../index.html">返回文章</a>
+        <a class="cue" href="../../index.html">返回首页</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> 精进</p>
+      <nav class="footer-nav" aria-label="页脚">
+        <a href="../index.html">文章</a>
+        <a href="../../index.html">首页</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../../script.js?v=jj20261009b"></script>
+</body>
+</html>
