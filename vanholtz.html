@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
-  <meta name="description" content="Becoming XLZ · 另一版视觉。内容待写。" />
+  <meta name="description" content="becoming · 另一版视觉。内容待写。" />
   <meta name="author" content="jay zhao" />
   <meta http-equiv="Cache-Control" content="no-cache" />
-  <title>Becoming XLZ · 另一版</title>
+  <title>becoming · 另一版</title>
   <link rel="canonical" href="https://withwanderingheart.github.io/vanholtz.html" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 96'%3E%3Cpolygon points='39 0 0 22 0 67 39 90 78 68 78 23' fill='%23090b0e' stroke='%2364ffda' stroke-width='6'/%3E%3Ctext x='39' y='58' text-anchor='middle' font-size='34' font-family='ui-monospace,monospace' font-weight='700' fill='%237dd3fc'%3EB%3C/text%3E%3C/svg%3E" />
   <style>
@@ -129,7 +129,12 @@
       letter-spacing: -0.03em;
       line-height: .88;
     }
-    .home-title { font-size: clamp(40px, 5.6vw, 72px); max-width: 10ch; }
+    .home-title {
+      font-size: clamp(56px, 8vw, 104px);
+      max-width: none;
+      text-transform: none;
+      letter-spacing: -0.045em;
+    }
     .band-title {
       font-family: var(--ui-font);
       font-weight: 600;
@@ -302,6 +307,7 @@
       transition: color .35s ease, -webkit-text-stroke .35s ease, opacity .35s ease;
       padding-right: 2vw;
     }
+    .project-link .keep-case { text-transform: none; }
     body.night-mode .project-link {
       color: transparent;
       -webkit-text-stroke: 2px #f2f2f2;
@@ -520,7 +526,7 @@
       .band-projects .kicker { width: 100%; padding-right: 6vw; }
       .split { grid-template-columns: 1fr; gap: 1.5rem; }
       .copyright { right: 24px; }
-      .home-title { font-size: 40px; max-width: 100%; }
+      .home-title { font-size: 52px; max-width: 100%; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -549,7 +555,7 @@
 
   <section id="home" class="band band-home">
     <p class="kicker">00 — home</p>
-    <h1 class="home-title">Becoming XLZ</h1>
+    <h1 class="home-title">becoming</h1>
     <p class="home-line">认知差 · 信息差</p>
     <p class="home-sub">另一套视觉。思辨、知行、大浪淘金、日有所进。内容待写。</p>
     <a class="jump" href="#projects">projects</a>
@@ -561,7 +567,7 @@
       <ul class="projects" id="projectsList">
         <li class="project-li">
           <div class="project-box">
-            <a class="project-link" href="index.html" data-year="2026">Becoming<br>首页</a>
+            <a class="project-link" href="index.html" data-year="2026"><span class="keep-case">becoming</span><br>首页</a>
           </div>
         </li>
         <li class="project-li is-selected">
@@ -590,7 +596,7 @@
 
   <section id="about" class="band">
     <p class="kicker">02 — about</p>
-    <h2 class="band-title">Becoming XLZ</h2>
+    <h2 class="band-title">becoming</h2>
     <div class="split">
       <div class="prose">
         <p>jay zhao。这页是另一套视觉。正文在首页：认知差写思辨和知行，信息差写大浪淘金和日有所进。</p>
@@ -617,13 +623,13 @@
   <section id="excerpt" class="band">
     <p class="kicker">04 — 摘录</p>
     <blockquote class="quote">
-      Becoming XLZ
+      becoming
       <cite>认知差 · 信息差</cite>
     </blockquote>
   </section>
 
   <div class="ui" id="ui">
-    <a class="logo" href="#home" aria-label="Becoming XLZ">
+    <a class="logo" href="#home" aria-label="becoming">
       <span>B</span>
     </a>
     <div class="info">
@@ -631,7 +637,7 @@
         <div class="contact">
           <ul>
             <li>jay zhao</li>
-            <li>Becoming XLZ</li>
+            <li>becoming</li>
           </ul>
           <ul>
             <li class="email"><a href="https://github.com/WithWanderingHeart"><strong>GitHub</strong></a></li>
@@ -665,7 +671,7 @@
         </div>
       </div>
     </div>
-    <div class="copyright">© <span id="year"></span> jay zhao · Becoming XLZ</div>
+    <div class="copyright">© <span id="year"></span> jay zhao · becoming</div>
   </div>
 
   <script>

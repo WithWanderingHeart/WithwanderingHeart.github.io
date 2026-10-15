@@ -1,4 +1,4 @@
-/* Becoming XLZ
+/* becoming
    新增文章不用改这个文件。见 README「如何新增一篇文章」。 */
 
 :root {
@@ -134,9 +134,9 @@ p { text-wrap: pretty; }
 }
 
 .brand-name {
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   white-space: nowrap;
 }
 
@@ -371,10 +371,10 @@ html.skip-loader .loader { display: none; }
 
 .motto {
   display: block;
-  font-size: clamp(2.15rem, 7.2vw, 5.1rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  padding-bottom: 0.02em;
+  font-size: clamp(3.15rem, 12vw, 7.25rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  padding-bottom: 0.04em;
 }
 
 .grad-rule {

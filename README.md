@@ -1,4 +1,4 @@
-# Becoming XLZ
+# becoming
 
 jay zhao 的个人站，静态页面。首页是空的品牌框架：题目、两条线、最近、关于。文章目录同样只留空壳。
 
@@ -16,7 +16,7 @@ python3 -m http.server 8080
 
 | 路径 | 说明 |
 |------|------|
-| `index.html` | 首页。Becoming XLZ，两条空线，最近为空 |
+| `index.html` | 首页。becoming，两条空线，最近为空 |
 | `writing/index.html` | 文章目录。认知差（思辨、知行）与信息差（大浪淘金、日有所进），篇目为空 |
 | `writing/cognition/` | 认知差。思辨、知行，目前没有文章 |
 | `writing/info/` | 信息差。大浪淘金、日有所进，目前没有文章 |
