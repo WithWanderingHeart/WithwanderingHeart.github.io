@@ -1,6 +1,6 @@
-# 精进
+# becoming
 
-jay zhao 的写作页。静态页面，中文为主。首页是题目和两条线的入口，文章按栏目分组。
+jay zhao 的个人站，静态页面。首页是空的品牌框架：题目、两条线、最近、关于。文章目录同样只留空壳。
 
 本地预览：
 
@@ -10,15 +10,17 @@ python3 -m http.server 8080
 
 打开 `http://localhost:8080`。
 
+线上地址仍是 `https://withwanderingheart.github.io/`。GitHub 用户名和仓库名还没改；账号改名之后再换 canonical / og:url。
+
 ## 页面
 
 | 路径 | 说明 |
 |------|------|
-| `index.html` | 首页。题目「精进」，认知差 / 信息差入口，最近文章 |
-| `writing/index.html` | 文章目录。两个标题下四个栏目 |
-| `writing/cognition/` | 认知差。思辨、知行 |
-| `writing/info/` | 信息差。大浪淘金、日有所进 |
-| `vanholtz.html` | 另一套视觉，链回首页 |
+| `index.html` | 首页。becoming，两条空线，最近为空 |
+| `writing/index.html` | 文章目录。认知差（思辨、知行）与信息差（大浪淘金、日有所进），篇目为空 |
+| `writing/cognition/` | 认知差。思辨、知行，目前没有文章 |
+| `writing/info/` | 信息差。大浪淘金、日有所进，目前没有文章 |
+| `vanholtz.html` | 另一套视觉，链回首页，没有旧正文 |
 | `styles.css` / `script.js` | 样式与导航。系统字体，无构建 |
 
 线上从 `main` 根目录发布，仓库里有 `.nojekyll`。
@@ -30,12 +32,10 @@ python3 -m http.server 8080
 
 ## 如何新增一篇文章
 
-1. 复制同栏目里的一篇到对应目录：思辨、知行在 `writing/cognition/`，大浪淘金、日有所进在 `writing/info/`。
-2. 改 `title`、`description`、`canonical`、日期、标题和正文。文末「继续读」换成同栏目其他篇。
-3. 在栏目页（`sibian.html` / `zhixing.html` / `dalang.html` / `riyou.html`）列表最上方加一条。
-4. 在 `writing/index.html` 对应分组最上方加一条。根目录 `index.html` 的「最近」保留最新几条。
+1. 在对应栏目目录新建一篇 HTML：思辨、知行在 `writing/cognition/`，大浪淘金、日有所进在 `writing/info/`。页头页脚沿用栏目页。
+2. 改 `title`、`description`、`canonical`、日期、标题和正文。
+3. 在栏目页（`sibian.html` / `zhixing.html` / `dalang.html` / `riyou.html`）列表加上一条，并在 `writing/index.html` 同一分组加上一条。
+4. 根目录 `index.html` 的「最近」只留最新几条。
 5. 只有改了 `styles.css` 或 `script.js` 时，才把各页的 `?v=` 换成新参数。
 
 `writing/index.html` 顶部的 HTML 注释里有同样的步骤。
-
-旧地址 `writing/chengwu.html`、`writing/fde.html`、`writing/settlement-to-yield.html` 会转到新路径。
