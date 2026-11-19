@@ -19,6 +19,7 @@ python3 -m http.server 8080
 | `writing/cognition/` | 认知差。思辨、知行 |
 | `writing/info/` | 信息差。大浪淘金、日有所进 |
 | `vanholtz.html` | 另一套视觉，链回首页 |
+| `album/` | 理论卡册。二十二张思考卡，按星级和类型翻看 |
 | `styles.css` / `script.js` | 样式与导航。系统字体，无构建 |
 
 线上从 `main` 根目录发布，仓库里有 `.nojekyll`。
@@ -27,6 +28,7 @@ python3 -m http.server 8080
 - 文章 <https://withwanderingheart.github.io/writing/>
 - 认知差 <https://withwanderingheart.github.io/writing/cognition/>
 - 信息差 <https://withwanderingheart.github.io/writing/info/>
+- 卡册 <https://withwanderingheart.github.io/album/>
 
 ## 如何新增一篇文章
 
