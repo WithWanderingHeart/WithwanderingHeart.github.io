@@ -14,7 +14,7 @@
   <link rel="canonical" href="https://withwanderingheart.github.io/album/" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 96'%3E%3Cpolygon points='39 0 0 22 0 67 39 90 78 68 78 23' fill='%23090b0e' stroke='%2364ffda' stroke-width='6'/%3E%3Ctext x='39' y='58' text-anchor='middle' font-size='34' font-family='ui-monospace,monospace' font-weight='700' fill='%237dd3fc'%3EY%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="../styles.css?v=jj20261009b" />
-  <link rel="stylesheet" href="album.css?v=1" />
+  <link rel="stylesheet" href="album.css?v=3" />
   <script>document.documentElement.classList.add("js");</script>
   <noscript><style>.reveal,.hero-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -72,37 +72,51 @@
   </nav>
 
   <main id="album">
+    <svg class="svg-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="starIris" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7dd3fc"/>
+          <stop offset="1" stop-color="#c084fc"/>
+        </linearGradient>
+        <linearGradient id="starFoil" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#64ffda"/>
+          <stop offset="0.5" stop-color="#f7f3ea"/>
+          <stop offset="1" stop-color="#fb7185"/>
+        </linearGradient>
+      </defs>
+    </svg>
     <header class="page-hero album-hero">
       <div class="wrap">
         <p class="crumb"><a href="../index.html">首页</a> <span aria-hidden="true">/</span> 卡册</p>
         <p class="eyebrow">图鉴</p>
         <h1 class="page-title">理论卡册</h1>
         <p class="lede">二十二张可以拿出来用的卡，分成原理、方法、判断。星是分量，箔面五星留给更重的决定。点开一张，看它该在什么场合生效。</p>
-
-        <div class="showcase-grid" id="showcase">
-          <button type="button" class="tc-open star-5" data-type="原理" data-open="diyi" aria-label="打开五星卡：第一性原理">
+        <div class="vitrine" id="showcase">
+          <div class="vitrine-card">
+            <button type="button" class="tc-open star-5" data-type="原理" data-open="diyi" aria-label="打开五星卡：第一性原理">
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 01</span><span class="tc-meta"><span class="tc-type">原理</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">箔</span></span></span><span class="tc-stars" aria-label="五星"><span aria-hidden="true">★★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 01</span><span class="tc-type">原理</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="40" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="0.7"/><circle cx="40" cy="40" r="3.2" fill="currentColor"/><path d="M40 8v7M40 65v7M8 40h7M65 40h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg><span class="tc-seal" aria-hidden="true">镇</span></span>
+              <span class="tc-stars" aria-label="五星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <span class="tc-name">第一性原理</span>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一个做法叠了好几层假设，你已经说不清它靠什么成立。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">箔面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
-          </button>
-          <div class="showcase-copy">
+        </button>
+          </div>
+          <div class="wall-label">
             <p class="sec-index"><span>镇册</span></p>
-            <p class="eyebrow">五星 · 原理 · No. 01</p>
+            <p class="wall-kicker">箔面 · 五星 · 原理 · No. 01</p>
             <h2 id="showcase-title">第一性原理</h2>
             <span class="grad-rule" aria-hidden="true"></span>
-            <p class="showcase-when">一个做法叠了好几层假设，你已经说不清它靠什么成立。</p>
-            <dl>
-              <dt>效果</dt>
-              <dd>把结论拆成还站得住的事实和约束，只留下这些事实仍支持的下一步。</dd>
-              <dt>联动</dt>
-              <dd>接着用「最小可行检验」决定测哪一层，用「边界条件」标出眼下并不具备的前提。</dd>
-            </dl>
+            <p class="wall-when">一个做法叠了好几层假设，你已经说不清它靠什么成立。</p>
+            <h3>效果</h3>
+            <p>把结论拆成还站得住的事实和约束，只留下这些事实仍支持的下一步。</p>
+            <h3>联动</h3>
+            <p>接着用「最小可行检验」决定测哪一层，用「边界条件」标出眼下并不具备的前提。</p>
           </div>
         </div>
       </div>
@@ -110,35 +124,30 @@
 
     <section id="atlas" class="section album-block" aria-labelledby="atlas-title">
       <div class="wrap">
-        <header class="sec-head">
-          <p class="sec-index"><span>图鉴</span></p>
-          <h2 id="atlas-title">按星和类型翻</h2>
-        </header>
-        <div class="album-tools">
-          <div class="filter-row" id="starFilters" role="radiogroup" aria-labelledby="starLabel">
-            <span class="filter-label" id="starLabel">星级</span>
-            <button type="button" class="filter-btn" role="radio" data-value="all" aria-checked="true" tabindex="0">全部</button>
-            <button type="button" class="filter-btn" role="radio" data-value="5" aria-checked="false" tabindex="-1">五星</button>
-            <button type="button" class="filter-btn" role="radio" data-value="4" aria-checked="false" tabindex="-1">四星</button>
-            <button type="button" class="filter-btn" role="radio" data-value="3" aria-checked="false" tabindex="-1">三星</button>
-            <button type="button" class="filter-btn" role="radio" data-value="2" aria-checked="false" tabindex="-1">二星</button>
-            <button type="button" class="filter-btn" role="radio" data-value="1" aria-checked="false" tabindex="-1">一星</button>
-          </div>
-          <div class="filter-row" id="typeFilters" role="radiogroup" aria-labelledby="typeLabel">
-            <span class="filter-label" id="typeLabel">类型</span>
-            <button type="button" class="filter-btn" role="radio" data-value="all" aria-checked="true" tabindex="0">全部</button>
-            <button type="button" class="filter-btn" role="radio" data-value="原理" aria-checked="false" tabindex="-1">原理</button>
-            <button type="button" class="filter-btn" role="radio" data-value="方法" aria-checked="false" tabindex="-1">方法</button>
-            <button type="button" class="filter-btn" role="radio" data-value="判断" aria-checked="false" tabindex="-1">判断</button>
+        <div class="cabinet-head">
+          <header class="sec-head">
+            <p class="sec-index"><span>图鉴</span></p>
+            <h2 id="atlas-title">按星和类型翻</h2>
+          </header>
+          <div class="album-tools">
+            <div class="filter-row" id="starFilters" role="radiogroup" aria-labelledby="starLabel">
+              <span class="filter-label" id="starLabel">星级</span>
+              <button type="button" class="filter-btn" role="radio" data-value="all" aria-checked="true" tabindex="0">全部</button>
+              <button type="button" class="filter-btn" role="radio" data-value="5" aria-checked="false" tabindex="-1">五星</button>
+              <button type="button" class="filter-btn" role="radio" data-value="4" aria-checked="false" tabindex="-1">四星</button>
+              <button type="button" class="filter-btn" role="radio" data-value="3" aria-checked="false" tabindex="-1">三星</button>
+              <button type="button" class="filter-btn" role="radio" data-value="2" aria-checked="false" tabindex="-1">二星</button>
+              <button type="button" class="filter-btn" role="radio" data-value="1" aria-checked="false" tabindex="-1">一星</button>
+            </div>
+            <div class="filter-row" id="typeFilters" role="radiogroup" aria-labelledby="typeLabel">
+              <span class="filter-label" id="typeLabel">类型</span>
+              <button type="button" class="filter-btn" role="radio" data-value="all" aria-checked="true" tabindex="0">全部</button>
+              <button type="button" class="filter-btn" role="radio" data-value="原理" aria-checked="false" tabindex="-1">原理</button>
+              <button type="button" class="filter-btn" role="radio" data-value="方法" aria-checked="false" tabindex="-1">方法</button>
+              <button type="button" class="filter-btn" role="radio" data-value="判断" aria-checked="false" tabindex="-1">判断</button>
+            </div>
           </div>
         </div>
-        <p class="rarity-key">
-          <span>纸 一星</span>
-          <span>素 二星</span>
-          <span>青 三星</span>
-          <span>虹 四星</span>
-          <span>箔 五星</span>
-        </p>
         <p class="atlas-count" id="atlasCount" aria-live="polite">共 22 张</p>
         <p class="atlas-empty" id="atlasEmpty" hidden>这组条件下没有卡。把星级或类型改回全部。</p>
         <div class="atlas" id="atlasGrid">
@@ -146,11 +155,13 @@
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 01</span><span class="tc-meta"><span class="tc-type">原理</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">箔</span></span></span><span class="tc-stars" aria-label="五星"><span aria-hidden="true">★★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 01</span><span class="tc-type">原理</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="40" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="0.7"/><circle cx="40" cy="40" r="3.2" fill="currentColor"/><path d="M40 8v7M40 65v7M8 40h7M65 40h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg><span class="tc-seal" aria-hidden="true">镇</span></span>
+              <span class="tc-stars" aria-label="五星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">第一性原理</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一个做法叠了好几层假设，你已经说不清它靠什么成立。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">箔面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -159,16 +170,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">把结论拆成还站得住的事实和约束，只留下这些事实仍支持的下一步。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">接着用「最小可行检验」决定测哪一层，用「边界条件」标出眼下并不具备的前提。</span></p>
           </div>
-        </details>
-<details class="tc star-5" id="beiyesi" data-star="5" data-type="判断">
+        </details><details class="tc star-5" id="beiyesi" data-star="5" data-type="判断">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 02</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">箔</span></span></span><span class="tc-stars" aria-label="五星"><span aria-hidden="true">★★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 02</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="tc-seal" aria-hidden="true">镇</span></span>
+              <span class="tc-stars" aria-label="五星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">贝叶斯更新</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">新的消息到了，你还在用上周的把握做决定。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">箔面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -177,16 +189,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">分成三行写：原先的把握、这条消息把它推向哪边、改完之后的把握。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">和「标出不确定」一起用，避免把改完的把握又写成确定。</span></p>
           </div>
-        </details>
-<details class="tc star-5" id="xitong" data-star="5" data-type="原理">
+        </details><details class="tc star-5" id="xitong" data-star="5" data-type="原理">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 03</span><span class="tc-meta"><span class="tc-type">原理</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">箔</span></span></span><span class="tc-stars" aria-label="五星"><span aria-hidden="true">★★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 03</span><span class="tc-type">原理</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="40" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="0.7"/><circle cx="40" cy="40" r="3.2" fill="currentColor"/><path d="M40 8v7M40 65v7M8 40h7M65 40h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg><span class="tc-seal" aria-hidden="true">镇</span></span>
+              <span class="tc-stars" aria-label="五星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">系统思维</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">你只改了一处，旁边的环节会跟着变，讨论却还停在这一处。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">箔面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -195,16 +208,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">写出上下游各一个被碰到的人，以及他会因此多做或少做的那一件事。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">配合「因果链」把碰到的人串成步骤，配合「激励机制」看他为什么愿意改。</span></p>
           </div>
-        </details>
-<details class="tc star-5" id="kezhengwei" data-star="5" data-type="判断">
+        </details><details class="tc star-5" id="kezhengwei" data-star="5" data-type="判断">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 04</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">箔</span></span></span><span class="tc-stars" aria-label="五星"><span aria-hidden="true">★★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 04</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="tc-seal" aria-hidden="true">镇</span></span>
+              <span class="tc-stars" aria-label="五星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">可证伪性</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一句判断听起来完整，但没有什么结果能说明它是错的。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">箔面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -213,16 +227,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">补上「若出现哪种结果，我就收回这句话」，并写明哪一天去核对。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">把收回条件交给「最小可行检验」，核对时用「用例子检验」对着一件真事。</span></p>
           </div>
-        </details>
-<details class="tc star-4" id="jihui" data-star="4" data-type="判断">
+        </details><details class="tc star-4" id="jihui" data-star="4" data-type="判断">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 05</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">虹</span></span></span><span class="tc-stars" aria-label="四星"><span aria-hidden="true">★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 05</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-stars" aria-label="四星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">机会成本</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">你准备答应一件事，比较里只有做和不做。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">虹印</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -231,16 +246,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">写下因此做不成的下一件具体的事，再决定这件事值不值得占掉它。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">用「关键少数」看被占掉的是不是更该做的那项，用「复利与时间」看差距会不会拉开。</span></p>
           </div>
-        </details>
-<details class="tc star-4" id="jili" data-star="4" data-type="原理">
+        </details><details class="tc star-4" id="jili" data-star="4" data-type="原理">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 06</span><span class="tc-meta"><span class="tc-type">原理</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">虹</span></span></span><span class="tc-stars" aria-label="四星"><span aria-hidden="true">★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 06</span><span class="tc-type">原理</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="40" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="0.7"/><circle cx="40" cy="40" r="3.2" fill="currentColor"/><path d="M40 8v7M40 65v7M8 40h7M65 40h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="四星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">激励机制</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一件事没人按约定做，你的解释还停在态度。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">虹印</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -249,16 +265,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">写出对方做成这件事、和做成相反的事，各自得到什么、失去什么。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">放进「系统思维」看奖励落在哪一环，再用「第二层思维」看大家都照此做之后奖励还在不在。</span></p>
           </div>
-        </details>
-<details class="tc star-4" id="dierceng" data-star="4" data-type="判断">
+        </details><details class="tc star-4" id="dierceng" data-star="4" data-type="判断">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 07</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">虹</span></span></span><span class="tc-stars" aria-label="四星"><span aria-hidden="true">★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 07</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-stars" aria-label="四星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">第二层思维</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">第一个答案很顺，在场的人都会点头。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">虹印</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -267,16 +284,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">再写一层：若大家都按这个答案做，三个月里哪一个条件会先不成立。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">用「反事实对照」写不这么做的那一支，用「机会成本」标出点头所让出的事。</span></p>
           </div>
-        </details>
-<details class="tc star-4" id="fanshishi" data-star="4" data-type="方法">
+        </details><details class="tc star-4" id="fanshishi" data-star="4" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 08</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">虹</span></span></span><span class="tc-stars" aria-label="四星"><span aria-hidden="true">★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 08</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="四星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">反事实对照</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">你要把一次结果归到某个做法上。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">虹印</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -285,16 +303,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">写下没采取这个做法时最可能发生的情况，并标出两边真正不同的那一个条件。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">不同的条件若多于一个，交给「只改一个变量」拆开再看。</span></p>
           </div>
-        </details>
-<details class="tc star-4" id="fuli" data-star="4" data-type="原理">
+        </details><details class="tc star-4" id="fuli" data-star="4" data-type="原理">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 09</span><span class="tc-meta"><span class="tc-type">原理</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">虹</span></span></span><span class="tc-stars" aria-label="四星"><span aria-hidden="true">★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 09</span><span class="tc-type">原理</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="40" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="0.7"/><circle cx="40" cy="40" r="3.2" fill="currentColor"/><path d="M40 8v7M40 65v7M8 40h7M65 40h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="四星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">复利与时间</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">两个选择眼下差不多，差别要很久以后才看得到。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">虹印</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -303,16 +322,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">按你真的会重复的节奏，把同一个动作摊到三次，看差距从哪一次开始拉开。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">若三次都做不到，用「机会成本」承认它占不住位置，不要把它算进以后的差距。</span></p>
           </div>
-        </details>
-<details class="tc star-3" id="bianjie" data-star="3" data-type="判断">
+        </details><details class="tc star-3" id="bianjie" data-star="3" data-type="判断">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 10</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">青</span></span></span><span class="tc-stars" aria-label="三星"><span aria-hidden="true">★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 10</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-stars" aria-label="三星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">边界条件</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一个做法在你见过的场合有效，你准备把它用到别处。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">青版</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -321,16 +341,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">写明它成立所需的两个条件，标出眼下这个场合里哪一个并不具备。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">不具备的那条，回到「第一性原理」看还剩什么成立，或写成「可证伪性」的收回条件。</span></p>
           </div>
-        </details>
-<details class="tc star-3" id="yinguo" data-star="3" data-type="原理">
+        </details><details class="tc star-3" id="yinguo" data-star="3" data-type="原理">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 11</span><span class="tc-meta"><span class="tc-type">原理</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">青</span></span></span><span class="tc-stars" aria-label="三星"><span aria-hidden="true">★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 11</span><span class="tc-type">原理</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="40" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="0.7"/><circle cx="40" cy="40" r="3.2" fill="currentColor"/><path d="M40 8v7M40 65v7M8 40h7M65 40h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="三星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">因果链</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">两件事先后发生，你准备把前一件当成原因。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">青版</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -339,16 +360,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">从结果倒推三步，每步写谁的哪个动作导致了下一件；接不上的地方空着，不要用「然后」填上。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">主语若是空泛的词，先用「把名词变成谁做了什么」改写，再排这三步。</span></p>
           </div>
-        </details>
-<details class="tc star-3" id="koujing" data-star="3" data-type="方法">
+        </details><details class="tc star-3" id="koujing" data-star="3" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 12</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">青</span></span></span><span class="tc-stars" aria-label="三星"><span aria-hidden="true">★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 12</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="三星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">口径一致</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">两处在比同一个数，你不确定它们量的是不是一件事。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">青版</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -357,16 +379,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">给这个数写一句定义：从哪到哪、含不含什么、谁在什么时点读它。两处都只用这一句。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">定义写完，用「用例子检验」各代一件具体的数，看会不会读出两个结果。</span></p>
           </div>
-        </details>
-<details class="tc star-3" id="zuixiao" data-star="3" data-type="方法">
+        </details><details class="tc star-3" id="zuixiao" data-star="3" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 13</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">青</span></span></span><span class="tc-stars" aria-label="三星"><span aria-hidden="true">★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 13</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="三星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">最小可行检验</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">你想先把整套做完，再看对不对。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">青版</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -375,16 +398,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">选一个这周能看到结果的最小切片，只验证最关键的那一个假设。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">假设来自「第一性原理」拆剩下的那层，什么算没通过来自「可证伪性」。</span></p>
           </div>
-        </details>
-<details class="tc star-3" id="shaoshu" data-star="3" data-type="判断">
+        </details><details class="tc star-3" id="shaoshu" data-star="3" data-type="判断">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 14</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">青</span></span></span><span class="tc-stars" aria-label="三星"><span aria-hidden="true">★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 14</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-stars" aria-label="三星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">关键少数</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">清单很长，每一项看起来都该做。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">青版</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -393,16 +417,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">圈出只完成两项、结果就会明显不同的那两项，其余标成这次不做。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">被圈中的两项，用「拆成下一步」写成一天内能做完的动作。</span></p>
           </div>
-        </details>
-<details class="tc star-2" id="xianxie" data-star="2" data-type="方法">
+        </details><details class="tc star-2" id="xianxie" data-star="2" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 15</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">素</span></span></span><span class="tc-stars" aria-label="二星"><span aria-hidden="true">★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 15</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="二星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">先写结论</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">说明已经写了几段，第一眼还看不见你主张什么。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">素卡</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -411,16 +436,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">把结论和要对方做的决定写到第一行，理由放在后面。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">对方若会反驳，结论旁边留一行，先用「先复述再评价」写你理解的对方主张。</span></p>
           </div>
-        </details>
-<details class="tc star-2" id="chaixia" data-star="2" data-type="方法">
+        </details><details class="tc star-2" id="chaixia" data-star="2" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 16</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">素</span></span></span><span class="tc-stars" aria-label="二星"><span aria-hidden="true">★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 16</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="二星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">拆成下一步</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">所谓下一步仍是一个项目名，不是一个动作。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">素卡</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -429,16 +455,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">改成一个人在一天内能做完的动作：动词、对象、做完能看见什么。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">若主语还是抽象名词，先过「把名词变成谁做了什么」。</span></p>
           </div>
-        </details>
-<details class="tc star-2" id="yibianliang" data-star="2" data-type="方法">
+        </details><details class="tc star-2" id="yibianliang" data-star="2" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 17</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">素</span></span></span><span class="tc-stars" aria-label="二星"><span aria-hidden="true">★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 17</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="二星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">只改一个变量</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一次改动同时换了规则、人和工具，出了问题对不上原因。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">素卡</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -447,16 +474,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">这次只留一个要改的量，其余写进「保持不变」，下一个再动。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">改完用「反事实对照」确认你比较的确实只有这一个量。</span></p>
           </div>
-        </details>
-<details class="tc star-2" id="lizi" data-star="2" data-type="方法">
+        </details><details class="tc star-2" id="lizi" data-star="2" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 18</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">素</span></span></span><span class="tc-stars" aria-label="二星"><span aria-hidden="true">★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 18</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="二星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">用例子检验</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一句概括听着对，但还没放到一件你亲历的事上。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">素卡</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -465,16 +493,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">拿一件真事把这句话走一遍，写下它在哪一步对不上。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">对不上的那一步，可以变成「可证伪性」里的收回条件。</span></p>
           </div>
-        </details>
-<details class="tc star-1" id="fushu" data-star="1" data-type="方法">
+        </details><details class="tc star-1" id="fushu" data-star="1" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 19</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">纸</span></span></span><span class="tc-stars" aria-label="一星"><span aria-hidden="true">★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 19</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="一星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">先复述再评价</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">你准备反驳，但对方的原话还复述不出来。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">纸面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -483,16 +512,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">先用自己的话写清对方的主张和理由，写到对方能点头，再写你的评价。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">评价若要收成决定，再接到「先写结论」的第一行。</span></p>
           </div>
-        </details>
-<details class="tc star-1" id="buqueding" data-star="1" data-type="判断">
+        </details><details class="tc star-1" id="buqueding" data-star="1" data-type="判断">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 20</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">纸</span></span></span><span class="tc-stars" aria-label="一星"><span aria-hidden="true">★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 20</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-stars" aria-label="一星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">标出不确定</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">猜测和已经核对过的事实写在同一句里。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">纸面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -501,16 +531,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">句末标「已核对」或「还不确定」。不确定的，补上你打算拿什么去核对。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">核对之后把握怎么变，交给「贝叶斯更新」分三行写。</span></p>
           </div>
-        </details>
-<details class="tc star-1" id="ranhou" data-star="1" data-type="方法">
+        </details><details class="tc star-1" id="ranhou" data-star="1" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 21</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">纸</span></span></span><span class="tc-stars" aria-label="一星"><span aria-hidden="true">★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 21</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="一星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">问「然后呢」</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一句话停在态度或判断，后面没有动作。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">纸面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -519,16 +550,17 @@
             <p><span class="tc-kicker">效果</span><span data-field="effect">连问一次「然后呢」，直到句子里出现一个人和一个下一步。</span></p>
             <p><span class="tc-kicker">联动</span><span data-field="combo">下一步若还是项目名，交给「拆成下一步」。</span></p>
           </div>
-        </details>
-<details class="tc star-1" id="mingci" data-star="1" data-type="方法">
+        </details><details class="tc star-1" id="mingci" data-star="1" data-type="方法">
           <summary>
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 22</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">纸</span></span></span><span class="tc-stars" aria-label="一星"><span aria-hidden="true">★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 22</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="一星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <h3 class="tc-name">把名词变成谁做了什么</h3>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">句子的主语是「流程」「效率」「协同」这类词。</span>
-              <span class="tc-hint">翻开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">纸面</span><span class="tc-hint">翻开</span></span>
             </span>
           </span>
           </summary>
@@ -549,44 +581,50 @@
           <h2 id="deck-title">先看地基</h2>
         </header>
         <p class="deck-note">三张叠在同一件事上。第一性原理负责拆到还站得住的事实，可证伪性规定什么结果会让你收回判断，最小可行检验把这两件事收成这周能看完的一个切片。</p>
-        <div class="deck">
-          <button type="button" class="tc-open tc-mini star-5" data-type="原理" data-open="diyi" aria-label="打开五星卡：第一性原理">
+        <div class="deck-tray">
+          <button type="button" class="tc-open star-5" data-type="原理" data-open="diyi" aria-label="打开五星卡：第一性原理">
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 01</span><span class="tc-meta"><span class="tc-type">原理</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">箔</span></span></span><span class="tc-stars" aria-label="五星"><span aria-hidden="true">★★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 01</span><span class="tc-type">原理</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="40" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="0.7"/><circle cx="40" cy="40" r="3.2" fill="currentColor"/><path d="M40 8v7M40 65v7M8 40h7M65 40h7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg><span class="tc-seal" aria-hidden="true">镇</span></span>
+              <span class="tc-stars" aria-label="五星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <span class="tc-name">第一性原理</span>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一个做法叠了好几层假设，你已经说不清它靠什么成立。</span>
-              <span class="tc-hint">打开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">箔面</span><span class="tc-hint">打开</span></span>
             </span>
           </span>
         </button>
-          <span class="deck-plus" aria-hidden="true">+</span>
-          <button type="button" class="tc-open tc-mini star-5" data-type="判断" data-open="kezhengwei" aria-label="打开五星卡：可证伪性">
+          <span class="deck-join" aria-hidden="true"></span>
+          <button type="button" class="tc-open star-5" data-type="判断" data-open="kezhengwei" aria-label="打开五星卡：可证伪性">
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 04</span><span class="tc-meta"><span class="tc-type">判断</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">箔</span></span></span><span class="tc-stars" aria-label="五星"><span aria-hidden="true">★★★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 48V30M32 30L16 16M32 30l16-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 04</span><span class="tc-type">判断</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M40 54V34M40 34 26 20M40 34l14-14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="tc-seal" aria-hidden="true">镇</span></span>
+              <span class="tc-stars" aria-label="五星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <span class="tc-name">可证伪性</span>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">一句判断听起来完整，但没有什么结果能说明它是错的。</span>
-              <span class="tc-hint">打开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">箔面</span><span class="tc-hint">打开</span></span>
             </span>
           </span>
         </button>
-          <span class="deck-plus" aria-hidden="true">+</span>
-          <button type="button" class="tc-open tc-mini star-3" data-type="方法" data-open="zuixiao" aria-label="打开三星卡：最小可行检验">
+          <span class="deck-join" aria-hidden="true"></span>
+          <button type="button" class="tc-open star-3" data-type="方法" data-open="zuixiao" aria-label="打开三星卡：最小可行检验">
           <span class="tc-shell">
             <span class="tc-face">
-              <span class="tc-top"><span class="tc-no">No. 13</span><span class="tc-meta"><span class="tc-type">方法</span><span aria-hidden="true"> · </span><span class="tc-rank" aria-hidden="true">青</span></span></span><span class="tc-stars" aria-label="三星"><span aria-hidden="true">★★★</span></span>
-              <span class="tc-glyph" aria-hidden="true"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M16 46h14M16 32h24M16 18h32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span class="tc-top"><span class="tc-no">No. 13</span><span class="tc-type">方法</span></span>
+              <span class="tc-medallion" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="27" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M26 50h12M24 40h20M22 30h28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="tc-stars" aria-label="三星"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 .7 7.45 4.35h3.85L8.2 6.6l1.25 3.7L6 8.15 2.55 10.3 3.8 6.6.7 4.35h3.85Z"/></svg></span>
               <span class="tc-name">最小可行检验</span>
+              <span class="tc-rule" aria-hidden="true"></span>
               <span class="tc-when">你想先把整套做完，再看对不对。</span>
-              <span class="tc-hint">打开</span>
+              <span class="tc-foot"><span class="tc-rank" aria-hidden="true">青版</span><span class="tc-hint">打开</span></span>
             </span>
           </span>
         </button>
         </div>
-        <p class="note">分开用，容易停在更长的分析，或做一个不知道什么叫失败的实验。叠在一起，多出来的是一次能做完的核对。</p>
+        <p class="plate-caption">分开用，容易停在更长的分析，或做一个不知道什么叫失败的实验。叠在一起，多出来的是一次能做完的核对。</p>
         <p class="album-aside">这些卡可以自己翻。若以后把一小叠交给助手，让它按这个框架来想，先选三张能在同一场合一起生效的，不要一次塞进一整本。</p>
       </div>
     </section>
@@ -628,6 +666,6 @@
   </dialog>
 
   <script src="../script.js?v=jj20261009b"></script>
-  <script src="album.js?v=1"></script>
+  <script src="album.js?v=2"></script>
 </body>
 </html>
